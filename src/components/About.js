@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div>
         <h1>Black Pomeranian</h1>
-        <img src={`${process.env.PUBLIC_URL}/images/profile.png`} alt="profile-image"/>
+        <img src={`${process.env.PUBLIC_URL}/images/profile.png`} alt="profile"/>
         <p>プログラマ、VJ。オーディオビジュアル、XR、インタラクティブ作品等の制作を行う。
             認知を変容させる表現をテーマに、表現や技術について実験的なアプローチを実施。
             このアプローチを通じて、文化への貢献を志向している。
