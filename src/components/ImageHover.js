@@ -14,6 +14,12 @@ function ImageHover() {
     setModalOpen(false);
   };
 
+  const handleOutsideClick = (e) => {
+    if (e.target.id === "modal-backdrop") {
+      closeModal();
+    }
+  };
+
   return (
     <div className="d-flex flex-wrap justify-content-center">
       <div className="position-relative m-2">
@@ -34,7 +40,14 @@ function ImageHover() {
       {/* 他の画像カードを同様に追加 */}
 
       {modalOpen && (
-        <div className="modal show d-block" tabIndex="-1" role="dialog" style={{backgroundColor: 'rgba(0,0,0,.8)'}}>
+        <div 
+          id="modal-backdrop" 
+          className="modal show d-block" 
+          tabIndex="-1" 
+          role="dialog" 
+          style={{ backgroundColor: 'rgba(0,0,0,.8)' }} 
+          onClick={handleOutsideClick}
+        >
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
               <div className="modal-header">
@@ -44,6 +57,9 @@ function ImageHover() {
               </div>
               <div className="modal-body">
                 <img src={selectedImage} alt="Enlarged" className="img-fluid"/>
+              </div>
+              <div className="modal-footer">
+                <p>test</p>
               </div>
             </div>
           </div>
