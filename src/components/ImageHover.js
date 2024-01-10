@@ -1,6 +1,24 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+const images = [
+    {
+      src: `${process.env.PUBLIC_URL}/images/profile.png`,
+      alt: 'サンプルです。',
+      description: 'ここに長文の説明を入れることができます。'
+    },
+    {
+      src: `${process.env.PUBLIC_URL}/images/blapome.png`,
+      alt: 'test',
+      description: '別の画像に関する長文の説明。'
+    },
+    {
+      src: `${process.env.PUBLIC_URL}/images/blapome.png`,
+      alt: 'test',
+      description: '長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。'
+    }  ];
+
 function ImageHover() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
@@ -74,13 +92,21 @@ function ImageHover() {
 
   return (
     <div className="d-flex flex-wrap justify-content-center">
-      <ImageCard src={`${process.env.PUBLIC_URL}/images/profile.png`} alt="サンプルです。" description="ここに長文の説明を入れることができます。" />
-      <ImageCard src={`${process.env.PUBLIC_URL}/images/blapome.png`} alt="test" description="別の画像に関する長文の説明。" />
+      {images.map((img, index) => (
+        <ImageCard 
+          key={index}
+          src={img.src} 
+          alt={img.alt} 
+          description={img.description} 
+        />
+      ))}
 
-
-      {/* 他のImageCardコンポーネントをここに追加 */}
-
-      <ImageModal isOpen={modalOpen} image={selectedImage} description={selectedDescription} onClose={closeModal} />
+      <ImageModal 
+        isOpen={modalOpen} 
+        image={selectedImage} 
+        description={selectedDescription} 
+        onClose={closeModal} 
+      />
     </div>
   );
 }
