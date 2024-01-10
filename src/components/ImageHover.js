@@ -1,25 +1,16 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-const images = [
-    {
-      src: `${process.env.PUBLIC_URL}/images/profile.png`,
-      alt: 'サンプルです。',
-      description: 'ここに長文の説明を入れることができます。'
-    },
-    {
-      src: `${process.env.PUBLIC_URL}/images/blapome.png`,
-      alt: 'test',
-      description: '別の画像に関する長文の説明。'
-    },
-    {
-      src: `${process.env.PUBLIC_URL}/images/blapome.png`,
-      alt: 'test',
-      description: '長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。長文のテキストです。'
-    }  ];
+import contentsData from '../contents.json';
 
 function ImageHover() {
+
+    const contents = contentsData.map(img => {
+        return {
+          ...img,
+          src: `${process.env.PUBLIC_URL}${img.src}`
+        };
+      });
+
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
   const [selectedDescription, setSelectedDescription] = useState(''); 
@@ -72,17 +63,12 @@ function ImageHover() {
       >
         <div className="modal-dialog modal-dialog-centered" role="document">
           <div className="modal-content">
-            <div className="modal-header">
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={onClose}>
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
             <div className="modal-body">
-              <img src={image} alt="Enlarged" className="img-fluid"/>
-              <p>{description}</p>
-            </div>
-            <div className="modal-footer">
-              <p>test</p>
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={onClose}>
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <img src={image} alt="Enlarged" className="img-fluid"/>
+                <p>{description}</p>
             </div>
           </div>
         </div>
@@ -92,7 +78,7 @@ function ImageHover() {
 
   return (
     <div className="d-flex flex-wrap justify-content-center">
-      {images.map((img, index) => (
+      {contents.map((img, index) => (
         <ImageCard 
           key={index}
           src={img.src} 
