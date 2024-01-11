@@ -17,17 +17,20 @@ header {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  background-color: transparent; /* ヘッダーの背景色を透明に設定 */
+  background-color: transparent;
   height: 90px;
   position: fixed;
   z-index: 10;
 }
 
 header .title h3 {
-  margin-left: 30px; /* ロゴの左マージンを15ピクセルに設定 */
+  margin-left: 30px; 
   color: white;
 }
-
+header .title a {
+  color: black; /* リンクの色を黒に設定 */
+  text-decoration: none; /* テキストの下線をなくす */
+}
 nav ul {
   margin: 0;
   padding: 0;
