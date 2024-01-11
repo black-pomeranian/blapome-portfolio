@@ -28,9 +28,10 @@ header .title h3 {
   color: white;
 }
 header .title a {
-  color: black; /* リンクの色を黒に設定 */
-  text-decoration: none; /* テキストの下線をなくす */
+  color: black; 
+  text-decoration: none; 
 }
+
 nav ul {
   margin: 0;
   padding: 0;
@@ -90,4 +91,8 @@ img {
 
 #skill button {
   margin-bottom: 100px;
+}
+
+.sns a {
+  color: var(--black-color); /* 定義されたCSS変数を使用して色を設定 */
 }
