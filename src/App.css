@@ -17,18 +17,19 @@ header {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  background: black;
-  color: white;
-  opacity: 0.5;
+  background-color: transparent;
   height: 90px;
   position: fixed;
   z-index: 10;
 }
 
-header .logo h3 {
-  margin: 0;
-  padding: 0;
+header .title h3 {
+  margin-left: 30px; 
   color: white;
+}
+header .title a {
+  color: black; 
+  text-decoration: none; 
 }
 
 nav ul {
@@ -90,4 +91,8 @@ img {
 
 #skill button {
   margin-bottom: 100px;
+}
+
+.sns a {
+  color: var(--black-color); /* 定義されたCSS変数を使用して色を設定 */
 }
