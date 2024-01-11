@@ -1,23 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const Header = () => {
   return (
-    <header>
-      <div className="logo">
-        <h3>Black Pomeranian</h3>
+    <header className="d-flex justify-content-between align-items-center">
+      <div className="title">
+        <h3 className="text-dark">Black Pomeranian</h3>
       </div>
-
       <nav>
-        <ul>
+        <ul className="d-flex justify-content-end">
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects" className="text-dark">Projects</Link> 
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" className="text-dark">About</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" className="text-dark">Contact</Link>
           </li>
         </ul>
       </nav>

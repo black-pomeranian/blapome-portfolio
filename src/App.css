@@ -17,17 +17,14 @@ header {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  background: black;
-  color: white;
-  opacity: 0.5;
+  background-color: transparent; /* ヘッダーの背景色を透明に設定 */
   height: 90px;
   position: fixed;
   z-index: 10;
 }
 
-header .logo h3 {
-  margin: 0;
-  padding: 0;
+header .title h3 {
+  margin-left: 30px; /* ロゴの左マージンを15ピクセルに設定 */
   color: white;
 }
 
