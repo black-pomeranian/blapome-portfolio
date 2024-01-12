@@ -94,5 +94,9 @@ img {
 }
 
 .sns a {
-  color: var(--black-color); /* 定義されたCSS変数を使用して色を設定 */
+  color: var(--black-color); 
+}
+
+.mail {
+  text-decoration: underline;
 }

@@ -2,12 +2,12 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div className="container">
-      <div className="row justify-content-center">
+    <div className="container h-100">
+      <div className="row h-100 justify-content-center align-items-center">
         <div className="col-auto text-left">
-          <div className="mb-2">black.pomera@gmail.com</div> {/* mb-2 は下マージンを設定 */}
-          <div className="mb-2"><a href="https://twitter.com/black_pomerania">X (Twitter)</a></div>
-          <div><a href="https://www.instagram.com/_black_pomeranian/">Instagram</a></div>
+          <p className="mail mb-3">black.pomera@gmail.com</p> 
+          <p className="sns mb-3"><a href="https://twitter.com/black_pomerania">X (Twitter)</a></p>
+          <p className="sns"><a href="https://www.instagram.com/_black_pomeranian/">Instagram</a></p>
         </div>
       </div>
     </div>
