@@ -1,21 +1,17 @@
-import React from 'react'
+import React from 'react';
 
 const Contact = () => {
   return (
-    <div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12"><p>black.pomera@gmail.com</p></div>
-        </div>
-        <div class="row">
-          <div class="col-12"><a href="https://twitter.com/black_pomerania">X (Twitter)</a></div>
-        </div>
-        <div class="row">
-          <div class="col-12"><a href="https://www.instagram.com/_black_pomeranian/">Instagram</a></div>
+    <div className="container h-100">
+      <div className="row h-100 justify-content-center align-items-center">
+        <div className="col-auto text-left">
+          <p className="mail mb-3">black.pomera@gmail.com</p> 
+          <p className="sns mb-3"><a href="https://twitter.com/black_pomerania">X (Twitter)</a></p>
+          <p className="sns"><a href="https://www.instagram.com/_black_pomeranian/">Instagram</a></p>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
