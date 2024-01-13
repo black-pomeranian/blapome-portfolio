@@ -2,21 +2,25 @@
     {
         "src": "/images/blapome.png",
         "alt": "First Image",
-        "description": "Description of the first image"
+        "description": "Description of the first image",
+        "url": "/test"
     },
     {
         "src": "/images/profile.png",
         "alt": "Second Image",
-        "description": "Description of the second image"
+        "description": "Description of the second image",
+        "url": "/test"
     },
     {
         "src": "/images/test.jpg",
         "alt": "First Image",
-        "description": "Description of the first image"
+        "description": "Description of the first image",
+        "url": "/test"
     },
     {
         "src": "/images/profile.png",
         "alt": "Second Image",
-        "description": "Description of the second image"
+        "description": "Description of the second image",
+        "url": "/test"
     }
 ]
