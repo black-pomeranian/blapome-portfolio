@@ -100,3 +100,18 @@ img {
 .mail {
   text-decoration: underline;
 }
+
+.aspect-16-9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9のアスペクト比 */
+}
+
+.aspect-16-9 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* コンテナに収まるように画像を切り取ります */
+}

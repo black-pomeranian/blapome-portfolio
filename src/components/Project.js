@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import contentsData from '../contents.json';
 
@@ -13,10 +13,12 @@ function Projects() {
 
   return (
     <div className="container">
-      <Row className="gx-1 gy-5">
+      <Row className="gx-5 gy-3">
         {images.map((image, index) => (
-          <Col md={6} key={index} className="text-center">
-            <img src={image.src} alt={image.alt} className="img-fluid" />
+          <Col md={6} key={index} className="mb-4">
+            <div className="aspect-16-9">
+              <img src={image.src} alt={image.alt} className="img-fluid" />
+            </div>
           </Col>
         ))}
       </Row>
