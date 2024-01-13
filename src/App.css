@@ -59,11 +59,6 @@ nav ul li a:hover {
   padding: 120px;
 }
 
-.container h1 {
-  text-align: center;
-  font-size: 50px;
-}
-
 .profileImage {
   object-fit: cover;
   height: 100px;
