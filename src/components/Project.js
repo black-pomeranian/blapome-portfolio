@@ -16,8 +16,9 @@ function Projects() {
       <Row className="gx-5 gy-3">
         {images.map((image, index) => (
           <Col md={6} key={index} className="mb-4">
-            <div className="aspect-16-9">
-              <img src={image.src} alt={image.alt} className="img-fluid" />
+            <div className="image-overlay-container card-aspect-ratio">
+              <img src={image.src} alt={image.alt} className="img-fluid img-rounded" />
+              <div className="image-overlay">{image.description}</div>
             </div>
           </Col>
         ))}
