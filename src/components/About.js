@@ -27,7 +27,8 @@ const About = () => {
           <div className="sns">
             <div className="text-start mb-2"> 
               <a href="https://twitter.com/black_pomerania" className="d-block mb-2" >X (Twitter)</a>
-              <a href="https://www.instagram.com/_black_pomeranian/" className="d-block" >Instagram</a>
+              <a href="https://www.instagram.com/_black_pomeranian/" className="d-block mb-2" >Instagram</a>
+              <a href="https://github.com/black-pomeranian" className="d-block" >GitHub</a>
             </div>
           </div>
         </div>
