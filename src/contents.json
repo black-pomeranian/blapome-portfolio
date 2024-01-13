@@ -8,5 +8,15 @@
         "src": "/images/profile.png",
         "alt": "Second Image",
         "description": "Description of the second image"
+    },
+    {
+        "src": "/images/blapome.png",
+        "alt": "First Image",
+        "description": "Description of the first image"
+    },
+    {
+        "src": "/images/profile.png",
+        "alt": "Second Image",
+        "description": "Description of the second image"
     }
 ]
