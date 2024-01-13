@@ -7,7 +7,7 @@ const Header = () => {
     <header className="d-flex justify-content-between align-items-center">
       <div className="title">
         <Link to="/" className="text-dark">
-          <h3 className="text-dark">Black Pomeranian</h3>
+          <h3 className="text-dark">𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</h3>
         </Link>
       </div>
       <nav>

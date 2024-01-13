@@ -5,7 +5,7 @@ import HomePage from "./components/HomePage";
 import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
-import Test from "./components/Test";
+import ProjectTemplate from "./components/ProjectTemplate";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path="/projects" element={<Project />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/test" element={<Test />} />
+          <Route path="/ProjectTemplate" element={<ProjectTemplate />} />
         </Routes>
       </div>
     </Router>
