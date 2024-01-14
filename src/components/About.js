@@ -13,8 +13,8 @@ const About = () => {
           />
         </div>
         <div className="col-md-5"> 
-          <h1 className="about-title text-start"><nobr>𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</nobr></h1> 
-          <p className="profile-jp text-start">
+          <h1 className="about-title text-start mb-3"><nobr>𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</nobr></h1> 
+          <p className="profile-jp text-start  mb-1">
             プログラマ、VJ。オーディオビジュアル、XR、インタラクティブ作品等の制作を行う。
             認知を変容させる表現をテーマに、表現や技術について実験的なアプローチを実施。
             このアプローチを通じて、文化への貢献を志向している。
@@ -26,8 +26,9 @@ const About = () => {
           </p>
           <div className="sns">
             <div className="text-start mb-2"> 
-              <a href="https://twitter.com/black_pomerania" className="d-block mb-2" >X (Twitter)</a>
-              <a href="https://www.instagram.com/_black_pomeranian/" className="d-block" >Instagram</a>
+              <a href="https://twitter.com/black_pomerania" className="d-block mb-1" >X (Twitter)</a>
+              <a href="https://www.instagram.com/_black_pomeranian/" className="d-block mb-1" >Instagram</a>
+              <a href="https://github.com/black-pomeranian" className="d-block" >GitHub</a>
             </div>
           </div>
         </div>
