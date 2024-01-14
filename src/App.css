@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Ubuntu:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&family=Zen+Kaku+Gothic+New&display=swap');
 :root {
   --black-color: #010000;
   --white-color: #ffffff;
@@ -98,8 +97,17 @@ img {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.profile-jp{
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.profile-en{
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
 .sns a {
-  color: var(--black-color); 
+  color: var(--black-color);
+  font-family: 'Zen Kaku Gothic New', sans-serif;    
 }
 
 /* Contact */
@@ -164,5 +172,9 @@ img {
 }
 
 .descliption-jp{
-  font-family: 'BIZ UDMincho', serif;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.descliption-en{
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }
