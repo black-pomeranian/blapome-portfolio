@@ -13,13 +13,13 @@ const About = () => {
           />
         </div>
         <div className="col-md-5"> 
-          <h1 className="h1-about text-start">Black Pomeranian</h1> 
-          <p className="text-start">
+          <h1 className="about-title text-start">Black Pomeranian</h1> 
+          <p className="plofile-jp text-start">
             プログラマ、VJ。オーディオビジュアル、XR、インタラクティブ作品等の制作を行う。
             認知を変容させる表現をテーマに、表現や技術について実験的なアプローチを実施。
             このアプローチを通じて、文化への貢献を志向している。
           </p>
-          <p className="text-start">
+          <p className="profile-en text-start">
             Programmer and VJ, creating audiovisual, XR, and interactive works.
             He conducts experimental approaches to expression and technology with the theme of expression that transforms perception.
             Through this approach, he aims to contribute to culture.

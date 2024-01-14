@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Ubuntu:wght@500&display=swap');
+
 :root {
   --black-color: #010000;
   --white-color: #ffffff;
@@ -24,11 +26,12 @@ header {
 }
 
 header .title h3 {
+  font-family: 'Ubuntu', sans-serif;
   margin-left: 30px; 
-  color: white;
+  color: rgb(0, 0, 0);
 }
+
 header .title a {
-  color: black; 
   text-decoration: none; 
 }
 
@@ -44,6 +47,7 @@ nav ul li {
 }
 
 nav ul li a {
+  font-family: 'Ubuntu', sans-serif;
   font-size: 19px;
   text-decoration: none;
   color: var(--white-color);
@@ -89,6 +93,11 @@ img {
 }
 
 /* About */
+
+.about-title{
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .sns a {
   color: var(--black-color); 
 }
@@ -97,6 +106,8 @@ img {
 .mail {
   text-decoration: underline;
 }
+
+
 
 /* Projects */
 .card-aspect-ratio {
@@ -141,5 +152,17 @@ img {
 }
 
 .image-overlay-container:hover .image-overlay {
-  opacity: 1; /* ホバー時はオーバーレイを表示 */
+  opacity: 1;
+}
+.project-img-title{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/*ProjectTemplate*/
+.project-title{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.descliption-jp{
+  font-family: 'BIZ UDMincho', serif;
 }
