@@ -13,7 +13,7 @@ const About = () => {
           />
         </div>
         <div className="col-md-5"> 
-          <h1 className="about-title text-start">Black Pomeranian</h1> 
+          <h1 className="about-title text-start"><nobr>𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</nobr></h1> 
           <p className="profile-jp text-start">
             プログラマ、VJ。オーディオビジュアル、XR、インタラクティブ作品等の制作を行う。
             認知を変容させる表現をテーマに、表現や技術について実験的なアプローチを実施。
