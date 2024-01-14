@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const Header = () => {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+
   return (
-    <header className="d-flex justify-content-between align-items-center">
+    <header className="header">
       <div className="title">
-        <Link to="/" className="text-dark">
-          <h3 className="text-dark">𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</h3>
+        <Link to="/">
+          <h3 className="text-dark"><nobr>𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</nobr></h3>
         </Link>
       </div>
-      <nav>
-        <ul className="d-flex justify-content-end">
+      <button className="nav-toggle" onClick={() => setIsNavExpanded(!isNavExpanded)}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </button>
+      <nav className={`nav ${isNavExpanded ? "expanded" : ""}`}>
+        <ul>
           <li>
-            <Link to="/projects" className="text-dark">Projects</Link> 
+            <Link to="/projects" className="text-dark" onClick={() => setIsNavExpanded(false)}>Projects</Link> 
           </li>
           <li>
-            <Link to="/about" className="text-dark">About</Link>
+            <Link to="/about" className="text-dark" onClick={() => setIsNavExpanded(false)}>About</Link>
           </li>
           <li>
-            <Link to="/contact" className="text-dark">Contact</Link>
+            <Link to="/contact" className="text-dark" onClick={() => setIsNavExpanded(false)}>Contact</Link>
           </li>
         </ul>
       </nav>

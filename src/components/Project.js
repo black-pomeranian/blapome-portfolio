@@ -20,7 +20,7 @@ function Projects() {
             <Link to={image.url}>
               <div className="image-overlay-container card-aspect-ratio">
                 <img src={image.src} alt={image.alt} className="img-fluid img-rounded" />
-                <div className="image-overlay">{image.description}</div>
+                <div className="image-overlay project-img-title">{image.description}</div>
               </div>
             </Link>
           </Col>
