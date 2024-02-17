@@ -26,9 +26,11 @@ const About = () => {
           </p>
           <div className="sns">
             <div className="text-start mb-2"> 
-              <a href="https://twitter.com/black_pomerania" className="d-block mb-1" >X (Twitter)</a>
-              <a href="https://www.instagram.com/_black_pomeranian/" className="d-block mb-1" >Instagram</a>
-              <a href="https://github.com/black-pomeranian" className="d-block" >GitHub</a>
+              <ul>
+                <li><a href="https://twitter.com/black_pomerania" className="d-block mb-1" ><img src={`${process.env.PUBLIC_URL}/images/logo-black.png`} alt="X account"className="snsImg" /></a></li>
+                <li><a href="https://www.instagram.com/_black_pomeranian/" className="d-block mb-1" ><img src={`${process.env.PUBLIC_URL}/images/Instagram_Glyph_Black.png`} alt="Instagram account"className="snsImg" /></a></li>
+                <li><a href="https://github.com/black-pomeranian" className="d-block" ><img src={`${process.env.PUBLIC_URL}/images/github-mark.png`} alt="GitHub account"className="snsImg" /></a></li>
+              </ul>
             </div>
           </div>
         </div>

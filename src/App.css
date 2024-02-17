@@ -163,6 +163,21 @@ nav ul li a:hover {
   color: var(--black-color);
   font-family: 'Zen Kaku Gothic New', sans-serif;    
 }
+.sns img {
+  width: 32px;
+  height: 32px; 
+}
+.sns li {
+  list-style: none;
+
+}
+
+.sns ul {
+  display: flex;
+  gap:20px;
+  margin: 0;
+  padding: 0;
+}
 
 /* Contact */
 .mail {
