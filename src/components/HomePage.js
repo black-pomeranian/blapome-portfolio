@@ -11,7 +11,7 @@ const HomePage = () => {
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x404040);
 
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 0.6;
 
     const renderer = new THREE.WebGLRenderer();
@@ -87,8 +87,9 @@ const HomePage = () => {
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('resize', onWindowResize);
-      ref.current.removeChild(renderer.domElement);
-    };
+      if (ref.current) {
+        ref.current.removeChild(renderer.domElement);
+      }    };
   }, []);
 
   return <div ref={ref}></div>;
