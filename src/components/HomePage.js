@@ -1,5 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const HomePage = () => {
   const ref = useRef();
@@ -7,31 +10,53 @@ const HomePage = () => {
   useEffect(() => {
     // シーン、カメラ、レンダラーの初期化
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    ref.current.appendChild(renderer.domElement);
 
-    // オブジェクトの追加（例：単純な立方体）
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+        // 3. カメラを作成する
+        const camera = new THREE.PerspectiveCamera(
+            75, // 視野角
+            window.innerWidth / window.innerHeight, // アスペクト比
+            0.1, // ニアクリップ面
+            1000 // ファークリップ面
+        );
+        camera.position.z = 15; // カメラの位置を設定する
 
-    camera.position.z = 5;
+        // 4. レンダラーを作成する
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
 
-    // アニメーションループ
-    const animate = () => {
-      requestAnimationFrame(animate);
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.zoomSpeed = 0.5;
+        controls.update(); // 初期化時に一度だけ呼び出す
 
-      // オブジェクトのアニメーション
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
+        // AmbientLightを追加する
+        const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+        scene.add(ambientLight);
 
-      renderer.render(scene, camera);
-    };
+        // 5. GLTFLoaderを作成する
+        const loader = new GLTFLoader();
+        
+        const dracoLoader = new DRACOLoader(); // DRACOLoaderのインスタンスを作成
+        dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.4.1/');
+        loader.setDRACOLoader(dracoLoader); // GLTFLoaderにDRACOLoaderのインスタンスを提供
 
-    animate();
+        // 6. 3Dモデルのロード＆描画
+        loader.load(
+          `${process.env.PUBLIC_URL}/model/blapome_far.glb`,
+            function (gltf) {
+                scene.add(gltf.scene);
+            },
+            undefined,
+            function (error) {
+                console.error(error);
+            }
+        );
+
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+        animate();
 
     // リサイズイベントのハンドリング
     window.addEventListener('resize', () => {
@@ -42,7 +67,6 @@ const HomePage = () => {
 
     // クリーンアップ関数
     return () => {
-      ref.current.removeChild(renderer.domElement);
     };
   }, []);
 
