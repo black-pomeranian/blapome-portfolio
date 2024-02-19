@@ -12,7 +12,7 @@ const About = () => {
             className="img-fluid" 
           />
         </div>
-        <div className="col-md-5"> 
+        <div className="col-md-5 text-light"> 
           <h1 className="about-title text-start mb-3"><nobr>Black Pomeranian</nobr></h1> 
           <p className="profile-jp text-start  mb-1 ">
             プログラマ、VJ。オーディオビジュアル、XR、インタラクティブ作品等の制作を行う。
