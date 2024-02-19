@@ -5,6 +5,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const HomePage = () => {
+
+  /*
   const ref = useRef();
 
   useEffect(() => {
@@ -93,6 +95,7 @@ const HomePage = () => {
   }, []);
 
   return <div ref={ref}></div>;
+  */
 };
 
 export default HomePage;

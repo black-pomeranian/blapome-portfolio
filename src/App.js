@@ -6,11 +6,12 @@ import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import ProjectTemplate from "./components/ProjectTemplate";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App ">
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
