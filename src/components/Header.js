@@ -8,7 +8,7 @@ const Header = () => {
     <header className="header">
       <div className="title">
         <Link to="/">
-          <h3 className="text-dark"><nobr>𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</nobr></h3>
+          <h3 className="text-light"><nobr>𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</nobr></h3>
         </Link>
       </div>
       <button className="nav-toggle" onClick={() => setIsNavExpanded(!isNavExpanded)}>
@@ -19,13 +19,13 @@ const Header = () => {
       <nav className={`nav ${isNavExpanded ? "expanded" : ""}`}>
         <ul>
           <li>
-            <Link to="/projects" className="text-dark" onClick={() => setIsNavExpanded(false)}>Projects</Link> 
+            <Link to="/projects" className="text-light" onClick={() => setIsNavExpanded(false)}>Projects</Link> 
           </li>
           <li>
-            <Link to="/about" className="text-dark" onClick={() => setIsNavExpanded(false)}>About</Link>
+            <Link to="/about" className="text-light" onClick={() => setIsNavExpanded(false)}>About</Link>
           </li>
           <li>
-            <Link to="/contact" className="text-dark" onClick={() => setIsNavExpanded(false)}>Contact</Link>
+            <Link to="/contact" className="text-light" onClick={() => setIsNavExpanded(false)}>Contact</Link>
           </li>
         </ul>
       </nav>
