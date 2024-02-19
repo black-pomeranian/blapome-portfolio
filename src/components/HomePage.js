@@ -1,15 +1,16 @@
 import React, { useRef, useEffect } from 'react';
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+//import * as THREE from 'three';
+//import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+//import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+//import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const HomePage = () => {
 
-  /*
+  
   const ref = useRef();
 
   useEffect(() => {
+    /*
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x404040);
 
@@ -91,11 +92,13 @@ const HomePage = () => {
       window.removeEventListener('resize', onWindowResize);
       if (ref.current) {
         ref.current.removeChild(renderer.domElement);
-      }    };
+      }    
+    };
+    */
   }, []);
 
   return <div ref={ref}></div>;
-  */
+  
 };
 
 export default HomePage;
