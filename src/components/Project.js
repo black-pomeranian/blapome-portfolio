@@ -14,7 +14,7 @@ function Projects() {
 
   return (
     <div className="container">
-      <Row className="gx-5 gy-3">
+      <Row className="gx-3 gy-3 ">
         {projects.map((image, index) => (
           <Col md={6} key={index} className="mb-4">
             <Link to={image.url}>
