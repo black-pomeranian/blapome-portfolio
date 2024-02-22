@@ -26,9 +26,9 @@ const About = () => {
           </p>
           <h3 className="about-performance text-start">出演歴</h3> 
           <div className="performance-jp text-start mb-1 py-2">
-            <p className="performance1">2024.02.16 さざれ場#5 </p>
-            <p className="performance1">2023.02.16 テスト </p>
-            <p className="performance1">2022.02.16 テスト２ </p>
+            <p className="performance">2024.02.16 さざれ場#5 </p>
+            <p className="performance">2023.02.16 テスト </p>
+            <p className="performance">2022.02.16 テスト２ </p>
 
           </div>
 

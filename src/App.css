@@ -205,7 +205,7 @@ nav ul li a:hover {
 }
 
 .img-rounded {
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .image-overlay-container {
@@ -227,7 +227,7 @@ nav ul li a:hover {
   transition: opacity 0.3s ease;
   padding: 10px;
   text-align: center; 
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .image-overlay-container:hover .image-overlay {
