@@ -24,6 +24,14 @@ const About = () => {
             He conducts experimental approaches to expression and technology with the theme of expression that transforms perception.
             Through this approach, he aims to contribute to culture.
           </p>
+          <h3 className="about-performance text-start">出演歴</h3> 
+          <div className="performance-jp text-start mb-1 py-2">
+            <p className="performance1">2024.02.16 さざれ場#5 </p>
+            <p className="performance1">2023.02.16 テスト </p>
+            <p className="performance1">2022.02.16 テスト２ </p>
+
+          </div>
+
           <div className="sns">
             <div className="text-start mb-2 py-2"> 
               <ul>
