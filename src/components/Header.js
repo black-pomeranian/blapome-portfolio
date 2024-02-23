@@ -19,13 +19,13 @@ const Header = () => {
       <nav className={`nav ${isNavExpanded ? "expanded" : ""}`}>
         <ul>
           <li>
-            <Link to="/projects" className="text-light" onClick={() => setIsNavExpanded(false)}>Projects</Link> 
+            <Link to="/projects" className="header-link" onClick={() => setIsNavExpanded(false)}>Projects</Link> 
           </li>
           <li>
-            <Link to="/about" className="text-light" onClick={() => setIsNavExpanded(false)}>About</Link>
+            <Link to="/about" className="header-link" onClick={() => setIsNavExpanded(false)}>About</Link>
           </li>
           <li>
-            <Link to="/contact" className="text-light" onClick={() => setIsNavExpanded(false)}>Contact</Link>
+            <Link to="/contact" className="header-link" onClick={() => setIsNavExpanded(false)}>Contact</Link>
           </li>
         </ul>
       </nav>

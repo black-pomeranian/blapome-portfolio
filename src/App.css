@@ -12,6 +12,11 @@ div {
   background-color: #202020;
 }
 
+::selection {
+  background-color: #f05050; 
+  color: #3500d3;
+}
+
 .App {
   font-size: 18px;
   height: 100vh;
@@ -65,9 +70,11 @@ nav ul li a {
   color: var(--white-color);
   transition: all 0.2s;
 }
-
-nav ul li a:hover {
-  color: #48b4af;
+.header-link {
+  color: #f8f9fa;
+}
+.header-link:hover {
+  color: #0044ff;
 }
 
 .nav-toggle {
