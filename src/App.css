@@ -13,7 +13,7 @@ div {
 }
 
 ::selection {
-  background-color: #f05050; 
+  background-color: #f82f2f; 
   color: #3500d3;
 }
 
@@ -229,15 +229,28 @@ nav ul li a {
 .image-overlay-container {
   position: relative;
 }
+.noise-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="1.5" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noiseFilter)"></rect></svg>');
+  opacity: 0.5; /* Adjust the opacity to your liking */
+  text-align: center; 
+}
 
+.image-overlay-container:hover .noise-overlay {
+  opacity: 1;
+}
 .image-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #f05050bb;
-  color: #3500d3;
+  background-color: #ff0000;
+  color: #4000ff;
   opacity: 0; 
   display: flex;
   align-items: center; 
@@ -253,6 +266,11 @@ nav ul li a {
 }
 .project-img-title{
   font-family: 'Ubuntu', sans-serif;
+}
+
+.project-title{
+  font-family: 'Ubuntu', sans-serif;
+  color: #f9f9f9;
 }
 
 /*ProjectTemplate*/
