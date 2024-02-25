@@ -10,13 +10,15 @@ const VJSystem = () => {
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
             <h1 className="project-title text-left">VJ System</h1>
+            <p className="text-left date">2023.6</p>
+
           </div>
         </div>
 
         {/* 画像 */}
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/profile.png`} alt="sample" className="img-fluid" />
+            <img src={`${process.env.PUBLIC_URL}/images/VJSystem/UI.webp`} alt="VJ System's UI" className="img-fluid" />
           </div>
         </div>
 
@@ -24,12 +26,24 @@ const VJSystem = () => {
         <div className="row justify-content-center">
           <div className="descliption-jp col-12 col-md-8">
             <p>
-              説明文がここに入ります。
+              クラブにてVJを実施するために開発したシステム。<br></br>
+              リアルタイムに音響を解析し、低音域、中音域、高音域、キックを取得。<br></br>
+              解析結果に応じて映像に変化が生じる。<br></br>
+              また、Midiコントローラを操作することによる映像素材の切り替えや、UI操作による色調の変化が可能となっている。<br></br>
             </p>
           </div>
           <div className="descliption-en col-12 col-md-8">
             <p>
-              Here is Explanation
+              System developed to perform VJ at clubs.<br></br>
+              Acoustics are analyzed in real time to acquire low, mid, and high frequencies and kicks.<br></br>
+              The video image changes according to the results of the analysis.<br></br>
+              In addition, the video material can be switched by operating the midi controller, and the color tone can be changed by operating the UI.<br></br>
+            </p>
+          </div>
+          <div className="credit col-12 col-md-8 py-2">
+            <p>
+              Credit<br></br>
+              All：Black Pomeranian<br></br>
             </p>
           </div>
         </div>
