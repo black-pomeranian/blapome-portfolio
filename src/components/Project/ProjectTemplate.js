@@ -10,6 +10,8 @@ const ProjectTemplate = () => {
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
             <h1 className="project-title text-left">Title</h1>
+            <p className="text-left date">日付</p>
+
           </div>
         </div>
 
