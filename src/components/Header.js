@@ -6,11 +6,9 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="title">
-        <Link to="/">
-          <h3 className="text-light"><nobr>𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</nobr></h3>
+        <Link to="/" className="title">
+          <h3 className="text-light header-title"><nobr>𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</nobr></h3>
         </Link>
-      </div>
       <button className="nav-toggle" onClick={() => setIsNavExpanded(!isNavExpanded)}>
         <span className="bar"></span>
         <span className="bar"></span>
