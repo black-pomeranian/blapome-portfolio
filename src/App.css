@@ -305,3 +305,8 @@ nav ul li a {
 .credit{
   color: #f8f9fa;
 }
+
+.small-image {
+  width: 100%; /* コンテナの幅に合わせて画像を拡大 */
+  height: auto; /* 縦横比を保持 */
+}

@@ -17,6 +17,7 @@ function App() {
     <Router>
       <div className="App ">
         <Header />
+
         <Routes>
           <Route path="/" element={<Project />} />
           <Route path="/about" element={<About />} />
@@ -27,6 +28,7 @@ function App() {
           <Route path="/Project/LieofMemories" element={<LieofMemories />} />
           <Route path="/Project/AudioVisualBattleSystem" element={<AudioVisualBattleSystem />} />
         </Routes>
+
       </div>
     </Router>
   );
