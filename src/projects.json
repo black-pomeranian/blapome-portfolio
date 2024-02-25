@@ -1,26 +1,26 @@
 [
     {
         "src": "/images/blapome.png",
-        "alt": "First Image",
-        "title": "Description of the first image",
-        "url": "Project/ProjectTemplate"
+        "alt": "Audio Visual Battle System",
+        "title": "Audio Visual Battle System",
+        "url": "/Project/AudioVisualBattleSystem"
     },
     {
         "src": "/images/profile.png",
-        "alt": "Second Image",
-        "title": "Description of the second image",
-        "url": "Project/ProjectTemplate"
+        "alt": "Lie of Memories",
+        "title": "Lie of Memories",
+        "url": "/Project/LieofMemories"
     },
     {
         "src": "/images/test.jpg",
-        "alt": "First Image",
-        "title": "Description of the first image",
-        "url": "Project/ProjectTemplate"
+        "alt": "VJSystem",
+        "title": "VJSystem",
+        "url": "/Project/VJSystem"
     },
     {
         "src": "/images/profile.png",
-        "alt": "Second Image",
-        "title": "Description of the second image",
-        "url": "Project/ProjectTemplate"
+        "alt": "ポートフォリオサイト",
+        "title": "ポートフォリオサイトの開設",
+        "url": "/Project/Portfolio"
     }
 ]

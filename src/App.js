@@ -5,7 +5,11 @@ import HomePage from "./components/HomePage";
 import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
-import ProjectTemplate from "./components/Projects/ProjectTemplate";
+import ProjectTemplate from "./components/Project/ProjectTemplate";
+import Portfolio from "./components/Project/Portfolio";
+import VJSystem from "./components/Project/VJSystem";
+import LieofMemories from "./components/Project/LieofMemories";
+import AudioVisualBattleSystem from "./components/Project/AudioVisualBattleSystem";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -17,7 +21,11 @@ function App() {
           <Route path="/" element={<Project />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/ProjectTemplate" element={<ProjectTemplate />} />
+          <Route path="/Project/ProjectTemplate" element={<ProjectTemplate />} />
+          <Route path="/Project/Portfolio" element={<Portfolio />} />
+          <Route path="/Project/ProjectTemplate" element={<VJSystem />} />
+          <Route path="/Project/ProjectTemplate" element={<LieofMemories />} />
+          <Route path="/Project/ProjectTemplate" element={<AudioVisualBattleSystem />} />
         </Routes>
       </div>
     </Router>
