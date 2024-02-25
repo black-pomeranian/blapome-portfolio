@@ -34,6 +34,14 @@ const ProjectTemplate = () => {
               Here is Explanation
             </p>
           </div>
+
+          <div className="credit col-12 col-md-8">
+            <p>
+              Credit<br></br>
+              aaa：Black Pomeranian<br></br>
+              bbb：山田<br></br>
+            </p>
+          </div>
         </div>
       </div>
     </div>
