@@ -23,9 +23,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/Project/ProjectTemplate" element={<ProjectTemplate />} />
           <Route path="/Project/Portfolio" element={<Portfolio />} />
-          <Route path="/Project/ProjectTemplate" element={<VJSystem />} />
-          <Route path="/Project/ProjectTemplate" element={<LieofMemories />} />
-          <Route path="/Project/ProjectTemplate" element={<AudioVisualBattleSystem />} />
+          <Route path="/Project/VJSystem" element={<VJSystem />} />
+          <Route path="/Project/LieofMemories" element={<LieofMemories />} />
+          <Route path="/Project/AudioVisualBattleSystem" element={<AudioVisualBattleSystem />} />
         </Routes>
       </div>
     </Router>

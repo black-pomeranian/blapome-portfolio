@@ -9,7 +9,7 @@ const LieofMemories = () => {
         {/* タイトル */}
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
-            <h1 className="project-title text-left">Title</h1>
+            <h1 className="project-title text-left">Lie of Memories</h1>
           </div>
         </div>
 
