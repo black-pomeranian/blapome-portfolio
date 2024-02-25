@@ -5,7 +5,7 @@ import HomePage from "./components/HomePage";
 import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
-import ProjectTemplate from "./components/ProjectTemplate";
+import ProjectTemplate from "./components/Projects/ProjectTemplate";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {

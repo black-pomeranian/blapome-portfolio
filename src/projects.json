@@ -3,24 +3,24 @@
         "src": "/images/blapome.png",
         "alt": "First Image",
         "title": "Description of the first image",
-        "url": "/ProjectTemplate"
+        "url": "Project/ProjectTemplate"
     },
     {
         "src": "/images/profile.png",
         "alt": "Second Image",
         "title": "Description of the second image",
-        "url": "/ProjectTemplate"
+        "url": "Project/ProjectTemplate"
     },
     {
         "src": "/images/test.jpg",
         "alt": "First Image",
         "title": "Description of the first image",
-        "url": "/ProjectTemplate"
+        "url": "Project/ProjectTemplate"
     },
     {
         "src": "/images/profile.png",
         "alt": "Second Image",
         "title": "Description of the second image",
-        "url": "/ProjectTemplate"
+        "url": "Project/ProjectTemplate"
     }
 ]
