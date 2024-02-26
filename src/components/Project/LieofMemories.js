@@ -20,7 +20,6 @@ const LieofMemories = () => {
             <img src={`${process.env.PUBLIC_URL}/images/LieofMemories/logo.jpg`} alt="Lie of Memoriesのロゴ画像" className="img-fluid py-1" />
             <img src={`${process.env.PUBLIC_URL}/images/LieofMemories/card.jpg`} alt="Lie of Memoriesのカードの画像" className="img-fluid py-1" />
             <img src={`${process.env.PUBLIC_URL}/images/LieofMemories/hand.jpg`} alt="Lie of Memoriesの手札の画像" className="img-fluid py-1" />
-            <img src={`${process.env.PUBLIC_URL}/images/LieofMemories/playing.jpg`} alt="Lie of Memoriesプレイ中の画像" className="img-fluid py-1" />
 
           </div>
         </div>
