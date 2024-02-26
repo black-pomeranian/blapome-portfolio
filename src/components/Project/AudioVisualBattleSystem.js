@@ -18,7 +18,7 @@ const AudioVisualBattleSystem = () => {
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
             <img src={`${process.env.PUBLIC_URL}/images/AVBattle/playing.webp`} alt="playing the battle" className="img-fluid py-1" />
-            <img src={`${process.env.PUBLIC_URL}/images/AVBattle/system.jpg`} alt="system" className="img-fluid" />
+            <img src={`${process.env.PUBLIC_URL}/images/AVBattle/System.jpg`} alt="system" className="img-fluid" />
           </div>
         </div>
         {/* 説明 */}
