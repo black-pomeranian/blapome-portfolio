@@ -284,22 +284,22 @@ nav ul li a {
 }
 
 .descliption-jp{
+  color: #f8f9fa;
   font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 .descliption-en{
+  color: #f8f9fa;
   font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 .date{
   color: #f8f9fa;
 }
-.descliption-jp{
-  color: #f8f9fa;
-}
 
-.descliption-en{
+.rubi{
   color: #f8f9fa;
+  font-size: smaller;
 }
 
 .credit{
