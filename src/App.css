@@ -4,12 +4,23 @@
   --white-color: #ffffff;
   --lightgray-color: #e6e6e6;
 }
+html {
+  background-color: #111111;
+
+}
+div {
+  background-color: #111111;
+}
+
+::selection {
+  background-color: #f82f2f; 
+  color: #3500d3;
+}
 
 .App {
   font-size: 18px;
   height: 100vh;
   width: 100%;
-  background-color: #202020;
   /* font-weight: 400; */
   /* font-style: normal; */
 }
@@ -37,7 +48,7 @@ header .title h3 {
   color: rgb(255, 255, 255);
 }
 
-header .title a {
+header .title {
   text-decoration: none; 
 }
 
@@ -59,9 +70,16 @@ nav ul li a {
   color: var(--white-color);
   transition: all 0.2s;
 }
+.header-link {
+  color: #f8f9fa;
+}
+.header-link:hover {
+  color: #0044ff;
+}
 
-nav ul li a:hover {
-  color: #48b4af;
+.header-title{
+  text-decoration: none;
+
 }
 
 .nav-toggle {
@@ -162,9 +180,14 @@ nav ul li a:hover {
 
 .sns a {
   color: white;
-  
   font-family: 'Zen Kaku Gothic New', sans-serif;    
 }
+
+.mail a {
+  color: white;
+  font-family: 'Zen Kaku Gothic New', sans-serif;    
+}
+
 .sns img {
   width: 32px;
   height: 32px; 
@@ -205,21 +228,34 @@ nav ul li a:hover {
 }
 
 .img-rounded {
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .image-overlay-container {
   position: relative;
 }
+.noise-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="1.5" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noiseFilter)"></rect></svg>');
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center; 
+}
 
+.image-overlay-container:hover .noise-overlay {
+  opacity: 1;
+}
 .image-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: #2c262694;
   opacity: 0; 
   display: flex;
   align-items: center; 
@@ -227,7 +263,7 @@ nav ul li a:hover {
   transition: opacity 0.3s ease;
   padding: 10px;
   text-align: center; 
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .image-overlay-container:hover .image-overlay {
@@ -237,15 +273,40 @@ nav ul li a:hover {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.project-title{
+  font-family: 'Ubuntu', sans-serif;
+  color: #f9f9f9;
+}
+
 /*ProjectTemplate*/
 .project-title{
   font-family: 'Ubuntu', sans-serif;
 }
 
 .descliption-jp{
+  color: #f8f9fa;
   font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 .descliption-en{
+  color: #f8f9fa;
   font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.date{
+  color: #f8f9fa;
+}
+
+.rubi{
+  color: #f8f9fa;
+  font-size: smaller;
+}
+
+.credit{
+  color: #f8f9fa;
+}
+
+.small-image {
+  width: 100%; /* コンテナの幅に合わせて画像を拡大 */
+  height: auto; /* 縦横比を保持 */
 }
