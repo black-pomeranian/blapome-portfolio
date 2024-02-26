@@ -9,14 +9,15 @@ const AudioVisualBattleSystem = () => {
         {/* タイトル */}
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
-            <h1 className="project-title text-left">Audio Visual Battle System</h1>
+            <h1 className="project-title text-left">Audio Visual Battle</h1>
+            <p className="text-left date">2024.2</p>
           </div>
         </div>
 
         {/* 画像 */}
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/profile.png`} alt="sample" className="img-fluid" />
+            <img src={`${process.env.PUBLIC_URL}/images/AVBattle/playing.webp`} alt="playing the battle" className="img-fluid" />
           </div>
         </div>
 
