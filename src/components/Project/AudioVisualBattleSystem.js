@@ -21,7 +21,6 @@ const AudioVisualBattleSystem = () => {
             <img src={`${process.env.PUBLIC_URL}/images/AVBattle/system.jpg`} alt="system" className="img-fluid" />
           </div>
         </div>
-
         {/* 説明 */}
         <div className="row justify-content-center">
           <div className="descliption-jp col-12 col-md-8">
