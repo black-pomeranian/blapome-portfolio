@@ -22,7 +22,7 @@ const About = () => {
             このアプローチを通じて、文化への貢献を志向している。
           </p>
           <p className="profile-en text-start py-2">
-            I am a programmer and VJ. We create audiovisual, XR and interactive works.
+            Programmer and VJ. I create audio-visual, XR and interactive works.
             I implement an experimental approach to expression and technology, based on the theme of cognitive transformation through the exploration of structure and the exchange of symbols.
             Through this approach, he aims to contribute to culture.
           </p>
