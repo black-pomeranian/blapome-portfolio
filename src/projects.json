@@ -13,14 +13,14 @@
     },
     {
         "src": "/images/VJSystem/UI.webp",
-        "alt": "VJSystem",
-        "title": "VJSystem",
+        "alt": "VJ System",
+        "title": "VJ System",
         "url": "/Project/VJSystem"
     },
     {
         "src": "/images/Portfolio/site.png",
         "alt": "Webサイト",
-        "title": "Webサイトの開設",
+        "title": "Webサイト",
         "url": "/Project/Portfolio"
     }
 ]
