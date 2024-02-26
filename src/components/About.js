@@ -26,10 +26,12 @@ const About = () => {
           </p>
           <h3 className="about-performance text-start">出演歴</h3> 
           <div className="performance-jp text-start py-2">
-            <p className="performance">2024.02.16 さざれ場#5 <br></br>
-            2023.02.16 テスト <br></br>
-            2022.02.16 テスト２ </p>
-
+            <p className="performance">
+              2024.02.16 さざれ場#5 <br></br>
+              2023.08.26 Jack in the box <br></br>
+              2022.07.15 MID NIGHT ECHORS <br></br>
+              2023.06.17 RIP CURRENT <br></br>
+            </p>
           </div>
 
           <div className="sns">
