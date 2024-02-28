@@ -26,12 +26,12 @@ const About = () => {
             I implement an experimental approach to expression and technology, based on the theme of cognitive transformation through the exploration of structure and the exchange of symbols.
             Through this approach, he aims to contribute to culture.
           </p>
-          <h3 className="about-performance text-start m-0">出演歴</h3> 
+          <h3 className="about-performance text-start m-0">出演</h3> 
           <div className="performance-jp text-start py-2">
             <p className="performance">
               2024.02.16 さざれ場#5 <br></br>
               2023.08.26 Jack in the box <br></br>
-              2022.07.15 MID NIGHT ECHORS <br></br>
+              2023.07.15 MID NIGHT ECHORS <br></br>
               2023.06.17 RIP CURRENT <br></br>
             </p>
           </div>

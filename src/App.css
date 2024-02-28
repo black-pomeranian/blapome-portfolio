@@ -132,7 +132,7 @@ nav ul li a {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background: rgba(220, 220, 220, 0.9);
+    background: #010000d3;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
