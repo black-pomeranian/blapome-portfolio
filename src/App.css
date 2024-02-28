@@ -21,8 +21,6 @@ div {
   font-size: 18px;
   height: 100vh;
   width: 100%;
-  /* font-weight: 400; */
-  /* font-style: normal; */
 }
 
 .container {
@@ -117,6 +115,19 @@ nav ul li a {
 }
 
 @media (max-width: 768px) {
+  .App {
+    font-size: 16px;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-performance {
+    font-size: 22px;
+  }
   .nav-toggle {
     display: block;
     z-index: 2;
@@ -132,7 +143,7 @@ nav ul li a {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background: rgba(220, 220, 220, 0.9);
+    background: #010000d3;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
