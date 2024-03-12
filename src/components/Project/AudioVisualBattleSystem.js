@@ -18,6 +18,7 @@ const AudioVisualBattleSystem = () => {
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
             <img src={`${process.env.PUBLIC_URL}/images/AVBattle/playing.webp`} alt="playing the battle" className="img-fluid py-1" />
+            <div class="ratio ratio-16x9"><iframe width='100%' src="https://www.youtube.com/embed/gSeWsXbDG0A?si=u5RboPsXIFQwh89R" title="Playing Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
             <img src={`${process.env.PUBLIC_URL}/images/AVBattle/System.jpg`} alt="system" className="img-fluid" />
           </div>
         </div>
