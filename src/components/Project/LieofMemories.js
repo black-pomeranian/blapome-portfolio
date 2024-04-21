@@ -48,7 +48,7 @@ const LieofMemories = () => {
           <div className="credit col-12 col-md-8 py-2">
             <p>
               Credit<br></br>
-              画像生成：Black Pomeranian<br></br>
+              企画、プログラム：Black Pomeranian<br></br>
               デザイン、写真等：岩谷虎之介<br></br>
             </p>
           </div>
