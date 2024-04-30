@@ -27,18 +27,16 @@ const VJSystem = () => {
         <div className="row justify-content-center">
           <div className="descliption-jp col-12 col-md-8">
             <p>
-              クラブにてVJを実施するために開発したシステム。<br></br>
-              リアルタイムに音響を解析し、低音域、中音域、高音域、キックを取得。<br></br>
-              解析結果に応じて映像に変化が生じる。<br></br>
-              また、Midiコントローラを操作することによる映像素材の切り替えや、UI操作による色調の変化が可能となっている。<br></br>
+              VJでは手動もしくは音の解析結果に連動した形でパラメータが調整された映像を出力する。<br></br>
+              そうした映像には、入力された音楽による聴覚的な情報、クラブ内での熱気や高揚感などの内臓感覚的な情報を内包されていると言える。<br></br>
+              それをグラフィックに落とし込むことを試みた。<br></br>
             </p>
           </div>
           <div className="descliption-en col-12 col-md-8">
             <p>
-              System developed to perform VJ at clubs.<br></br>
-              Acoustics are analyzed in real time to acquire low, mid, and high frequencies and kicks.<br></br>
-              The video image changes according to the results of the analysis.<br></br>
-              In addition, the video material can be switched by operating the midi controller, and the color tone can be changed by operating the UI.<br></br>
+              The VJ outputs images with parameters adjusted manually or in conjunction with sound analysis results.<br></br>
+              Such images contain auditory information from the music input, as well as visceral information such as the heat and exuberance in the club.<br></br>
+              I attempted to incorporate this information into the graphics.<br></br>
             </p>
           </div>
           <div className="credit col-12 col-md-8 py-2">
