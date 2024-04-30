@@ -9,8 +9,8 @@ const VJSystem = () => {
         {/* タイトル */}
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
-            <h1 className="project-title text-left">VJ System</h1>
-            <p className="text-left date">2023.6</p>
+            <h1 className="project-title text-left">クラブカルチャー起点のVJをグラフィックスへ落とし込む試み</h1>
+            <p className="text-left date">2024.4</p>
 
           </div>
         </div>
