@@ -1,7 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import InstagramPost from '../InstagramPost'; // InstagramPost コンポーネントのインポート
+
 
 const VJSystem = () => {
+  
+
   return (
     <div className="container">
 
@@ -16,12 +20,8 @@ const VJSystem = () => {
         </div>
 
         {/* 画像 */}
-        <div className="row mb-4 justify-content-center">
-          <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/VJSystem/UI.webp`} alt="VJ System's UI" className="img-fluid small-image d-block mx-auto py-1" />
-            <img src={`${process.env.PUBLIC_URL}/images/VJSystem/playing.png`} alt="Playing the VJ System" className="img-fluid small-image" />
-          </div>
-        </div>
+        <InstagramPost />
+        
 
         {/* 説明 */}
         <div className="row justify-content-center">
