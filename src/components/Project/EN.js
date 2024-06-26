@@ -37,10 +37,11 @@ const VJSystem = () => {
           </div>
           <div className="descliption-en col-12 col-md-8">
             <p>
-              System developed to perform VJ at clubs.<br></br>
-              Acoustics are analyzed in real time to acquire low, mid, and high frequencies and kicks.<br></br>
-              The video image changes according to the results of the analysis.<br></br>
-              In addition, the video material can be switched by operating the midi controller, and the color tone can be changed by operating the UI.<br></br>
+              I hosted the DJ party "EN".<br></br>
+              In addition to performing as a DJ, I also created the visuals.<br></br>
+              The title "EN" has multiple meanings in Japanese, such as connection, circle, flame, feast, and performance.<br></br>
+              Additionally, in English, the prefix "EN" can transform nouns and adjectives into verbs, highlighting the idea of a place not confined to a single concept or phenomenon.<br></br>
+              Inspired by this, I designed the logo supported by various forms of circles, and the main visual symbolizes a chain of circles spreading like a string of beads.<br></br>
             </p>
           </div>
           <div className="credit col-12 col-md-8 py-2">
