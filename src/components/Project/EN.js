@@ -18,7 +18,8 @@ const VJSystem = () => {
         {/* 画像 */}
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/EN/EN_graphic.png`} alt="VJ System's UI" className="img-fluid small-image d-block mx-auto py-1" />
+            <img src={`${process.env.PUBLIC_URL}/images/EN/EN_graphic.png`} alt="EN's Flyer" className="img-fluid small-image d-block mx-auto py-1" />
+            <img src={`${process.env.PUBLIC_URL}/images/EN/EN_sticker.jpg`} alt="EN's Sticker" className="img-fluid small-image d-block mx-auto py-1" />
           </div>
         </div>
 
