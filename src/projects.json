@@ -1,5 +1,11 @@
 [
     {
+        "src": "/images/EN/EN_main.png",
+        "alt": "ENのメインビジュアル",
+        "title": "EN",
+        "url": "/Project/EN"
+    },
+    {
         "src": "/images/AVBattle/playing.webp",
         "alt": "Audio Visual Battle",
         "title": "Audio Visual Battle",
