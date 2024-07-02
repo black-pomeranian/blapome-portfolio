@@ -356,3 +356,6 @@ nav ul li a {
   height: auto; /* 縦横比を保持 */
 }
 
+.half-size {
+  width: 50%;
+}

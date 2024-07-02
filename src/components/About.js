@@ -29,12 +29,13 @@ const About = () => {
           <h3 className="about-performance text-start m-0">出演</h3> 
           <div className="performance-jp text-start py-2">
             <p className="performance">
-              2024.05.23 UMBRO 100th Aniversary BENE×UMBRO POPUP STORE RECEPTION PARTY<br></br>
-              2024.03.30 PLAYGROUND vol.6<br></br>
-              2024.02.16 さざれ場#5 <br></br>
-              2023.08.26 Jack in the box <br></br>
-              2023.07.15 MID NIGHT ECHORS <br></br>
-              2023.06.17 RIP CURRENT <br></br>
+              2027.07.27 EN vol.1 "en"counter (DJ)<br></br>
+              2024.05.23 UMBRO 100th Aniversary BENE×UMBRO POPUP STORE RECEPTION PARTY (VJ)<br></br>
+              2024.03.30 PLAYGROUND vol.6 (VJ)<br></br>
+              2024.02.16 さざれ場#5 (VJ)<br></br>
+              2023.08.26 Jack in the box (DJ)<br></br>
+              2023.07.15 MID NIGHT ECHORS (VJ)<br></br>
+              2023.06.17 RIP CURRENT (DJ)<br></br>
             </p>
           </div>
 
