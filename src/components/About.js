@@ -17,14 +17,14 @@ const About = () => {
           <h1 className="about-title text-start mb-3">Black Pomeranian</h1> 
 
           <p className="profile-jp text-start mb-1 py-2">
-            プログラマ、VJ。オーディオビジュアル、XR、インタラクティブ作品等の制作を行う。
-            構造の探求と記号の交換による認知の変容をテーマに、表現や技術について実験的なアプローチを実施。
-            このアプローチを通じて、文化への貢献を志向している。
+            プログラマ、VJ、DJ。オーディオビジュアル、インタラクティブ作品等を制作。
+            創造や空想を実現するための手法としてテクノロジーを定義し開発を行う。
+            クラブカルチャーをはじめとした文化への貢献、実験的で寛容な場所の醸成を目指している。
           </p>
           <p className="profile-en text-start py-2">
-            Programmer and VJ. I create audio-visual, XR and interactive works.
-            I implement an experimental approach to expression and technology, based on the theme of cognitive transformation through the exploration of structure and the exchange of symbols.
-            Through this approach, he aims to contribute to culture.
+          Programmer, VJ, DJ. I create audiovisual and interactive works. 
+          I define and develop technology as a method to realize creativity and imagination. 
+          I aim to contribute to culture, including club culture, and foster experimental and inclusive spaces.
           </p>
           <h3 className="about-performance text-start m-0">出演</h3> 
           <div className="performance-jp text-start py-2">
