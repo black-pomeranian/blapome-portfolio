@@ -23,13 +23,13 @@ const Header = () => {
       <nav className={`nav ${isNavExpanded ? "expanded" : ""}`}>
         <ul>
           <li>
-            <Link to="/" className="header-link" onClick={() => setIsNavExpanded(false)}>Projects</Link> 
-          </li>
-          <li>
             <Link to="/about" className="header-link" onClick={() => setIsNavExpanded(false)}>About</Link>
           </li>
           <li>
-            <Link to="/contact" className="header-link" onClick={() => setIsNavExpanded(false)}>Contact</Link>
+            <Link to="/" className="header-link" onClick={() => setIsNavExpanded(false)}>Project</Link> 
+          </li>
+          <li>
+            <Link to="/contact" className="header-link" onClick={() => setIsNavExpanded(false)}>Performance</Link>
           </li>
         </ul>
       </nav>
