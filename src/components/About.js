@@ -33,9 +33,11 @@ const About = () => {
           <div className="sns">
             <div className="text-start mb-2 py-2"> 
               <ul>
-                <li><a href="https://twitter.com/black_pomerania" target="_blank" rel="noopener noreferrer" className="d-block mb-1" ><img src={`${process.env.PUBLIC_URL}/images/Logo/logo-white.png`} alt="X account"className="snsImg" /></a></li>
-                <li><a href="https://www.instagram.com/_black_pomeranian/" target="_blank" rel="noopener noreferrer" className="d-block mb-1" ><img src={`${process.env.PUBLIC_URL}/images/Logo/Instagram_Glyph_White.png`} alt="Instagram account"className="snsImg" /></a></li>
-                <li><a href="https://github.com/black-pomeranian" target="_blank" rel="noopener noreferrer" className="d-block" ><img src={`${process.env.PUBLIC_URL}/images/Logo/github-mark-white.png`} alt="GitHub account"className="snsImg" /></a></li>
+                <li><a href="https://twitter.com/black_pomerania" target="_blank" rel="noopener noreferrer" className="d-block mb-1" ><img src={`${process.env.PUBLIC_URL}/images/Logo/logo-white.png`} alt="https://twitter.com/black_pomerania"className="snsImg" /></a></li>
+                <li><a href="https://www.instagram.com/_black_pomeranian/" target="_blank" rel="noopener noreferrer" className="d-block mb-1" ><img src={`${process.env.PUBLIC_URL}/images/Logo/Instagram_Glyph_White.png`} alt="https://www.instagram.com/_black_pomeranian/"className="snsImg" /></a></li>
+                <li><a href="https://github.com/black-pomeranian" target="_blank" rel="noopener noreferrer" className="d-block" ><img src={`${process.env.PUBLIC_URL}/images/Logo/github-mark-white.png`} alt="https://github.com/black-pomeranian"className="snsImg" /></a></li>
+                <li><a href="mailto:black.pomera@gmail.com" rel="noopener noreferrer" className="d-block mb-1"><img src={`${process.env.PUBLIC_URL}/images/Logo/mail.png`} alt="black.pomera@gmail.com" className="snsImg"/></a>
+                </li>
               </ul>
             </div>
           </div>
