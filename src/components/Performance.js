@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Contact = () => {
+const Performance = () => {
   return (
     <div className="container h-100 text-light ">
       <div className="flex justify-content-center align-items-center ">
@@ -24,4 +24,4 @@ const Contact = () => {
   );
 }
 
-export default Contact;
+export default Performance;

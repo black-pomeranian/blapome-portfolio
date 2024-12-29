@@ -29,7 +29,7 @@ const Header = () => {
             <Link to="/" className="header-link" onClick={() => setIsNavExpanded(false)}>Project</Link> 
           </li>
           <li>
-            <Link to="/contact" className="header-link" onClick={() => setIsNavExpanded(false)}>Performance</Link>
+            <Link to="/performance" className="header-link" onClick={() => setIsNavExpanded(false)}>Performance</Link>
           </li>
         </ul>
       </nav>
