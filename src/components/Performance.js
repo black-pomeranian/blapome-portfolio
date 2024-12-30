@@ -1,27 +1,51 @@
 import React from 'react';
 
+const data = [
+  {
+    year: "2024",
+    achievements: [
+      "[DJ/VJ] upfn OLYMPICO Reception Party",
+      "[VJ] THEATER BOUNCE presented by イヨシコーラ",
+      "[VJ] PLAYGROUND vol.7",
+      "[DJ/VJ] EN vol.2 encircle",
+      "[VJ] BENE×UMBRO POP UP STORE Mikawaya - Hamamatsu",
+      "[DJ] EN vol.1 \"en\"counter",
+      "[VJ] UMBRO 100th Anniversary BENE×UMBRO POPUP STORE RECEPTION PARTY",
+      "[VJ] PLAYGROUND vol.6",
+      "[VJ] さざれ場#5"
+      
+    ],
+  },
+  {
+    year: "2023",
+    achievements: [
+      "[DJ] Jack in the box",
+      "[VJ] MID NIGHT ECHORS",
+      "[DJ] RIP CURRENT",
+    ],
+  },
+];
+
+
 const Performance = () => {
   return (
-    <div className="container h-100 text-light ">
-      <div className="flex justify-content-center align-items-center ">
-          <div className="performance-jp text-start">
-            <ul className="performance list-unstyled space-y-4">
-              <li>2024.11.16 [DJ/VJ] upfn OLYMPICO Reception Party</li>
-              <li>2024.11.09 [VJ] THEATER BOUNCE presented by イヨシコーラ</li>
-              <li>2024.10.07 [VJ] PLAYGROUND vol.7 </li>
-              <li>2024.08.23 [VJ] BENE×UMBRO POP UP STORE Mikawaya - Hamamatsu</li>
-              <li>2024.07.27 [DJ] EN vol.1 "en"counter</li>
-              <li>2024.05.23 [VJ] UMBRO 100th Anniversary BENE×UMBRO POPUP STORE RECEPTION PARTY</li>
-              <li>2024.03.30 [VJ] PLAYGROUND vol.6</li>
-              <li>2024.02.16 [VJ] さざれ場#5</li>
-              <li>2023.08.26 [DJ] Jack in the box</li>
-              <li>2023.07.15 [VJ] MID NIGHT ECHORS</li>
-              <li>2023.06.17 [DJ] RIP CURRENT</li>
-            </ul>
+    <div className="container h-screen flex justify-center items-center">
+      <div className="flex flex-col space-y-8 p-4 text-light">
+        {data.map((item, index) => (
+          <div key={index} className="flex space-x-8">
+            {/* 年の表示 */}
+            <div className="w-20 font-bold text-xl lg:text-2xl text-light">{item.year}</div>
+            {/* 実績リスト */}
+            <div className="flex-1 space-y-2 text-light">
+              {item.achievements.map((achievement, i) => (
+                <div key={i} className="">{achievement}</div>
+              ))}
+            </div>
           </div>
+        ))}
       </div>
     </div>
   );
-}
+};
 
 export default Performance;
