@@ -4,7 +4,7 @@ import Header from "./components/Header";
 //import HomePage from "./components/HomePage";
 import About from "./components/About";
 import Project from "./components/Project";
-import Contact from "./components/Contact";
+import Performance from "./components/Performance";
 import ProjectTemplate from "./components/Project/ProjectTemplate";
 import Portfolio from "./components/Project/Portfolio";
 import VJSystem from "./components/Project/VJSystem";
@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Project />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/performance" element={<Performance />} />
           <Route path="/Project/ProjectTemplate" element={<ProjectTemplate />} />
           <Route path="/Project/Portfolio" element={<Portfolio />} />
           <Route path="/Project/VJSystem" element={<VJSystem />} />
