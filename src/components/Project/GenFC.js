@@ -18,9 +18,9 @@ const GenFC = () => {
         {/* 画像 */}
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
-          <img src={`${process.env.PUBLIC_URL}/images/GenFC/GenFC_summary1.webp`} alt="GenFC movie 1" className="img-fluid small-image d-block mx-auto py-1" />
-          <img src={`${process.env.PUBLIC_URL}/images/GenFC/GenFC_summary2.webp`} alt="GenFC movie 2" className="img-fluid small-image d-block mx-auto py-1" />
-          <img src={`${process.env.PUBLIC_URL}/images/GenFC/GenFC_summary3.webp`} alt="GenFC movie 3" className="img-fluid small-image d-block mx-auto py-1" />
+          <img src={`${process.env.PUBLIC_URL}/images/GenFC/GenFC1.webp`} alt="GenFC movie 1" className="img-fluid small-image d-block mx-auto py-1" />
+          <img src={`${process.env.PUBLIC_URL}/images/GenFC/GenFC2.webp`} alt="GenFC movie 2" className="img-fluid small-image d-block mx-auto py-1" />
+          <img src={`${process.env.PUBLIC_URL}/images/GenFC/GenFC3.webp`} alt="GenFC movie 3" className="img-fluid small-image d-block mx-auto py-1" />
           </div>
         </div>
 
