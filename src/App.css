@@ -1,4 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&family=Zen+Kaku+Gothic+New&display=swap');
+
 :root {
   --black-color: #010000;
   --white-color: #ffffff;
@@ -121,13 +125,8 @@ nav ul li a {
     width: 100%;
   }
 
-  .about-title {
-    font-size: 28px;
-  }
 
-  .about-performance {
-    font-size: 22px;
-  }
+  
   .nav-toggle {
     display: block;
     z-index: 2;
