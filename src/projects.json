@@ -1,5 +1,11 @@
 [
     {
+        "src": "/images/GenFC/GenFC_summary1.webp",
+        "alt": "GenFC",
+        "title": "GenFC",
+        "url": "/Project/GenFC"
+    },
+    {
         "src": "/images/EN/EN_main.png",
         "alt": "ENのメインビジュアル",
         "title": "EN",
