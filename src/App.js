@@ -11,6 +11,7 @@ import VJSystem from "./components/Project/VJSystem";
 import LieofMemories from "./components/Project/LieofMemories";
 import AudioVisualBattleSystem from "./components/Project/AudioVisualBattleSystem";
 import EN from "./components/Project/EN";
+import GenFC from "./components/Project/GenFC";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Project/LieofMemories" element={<LieofMemories />} />
           <Route path="/Project/AudioVisualBattleSystem" element={<AudioVisualBattleSystem />} />
           <Route path="/Project/EN" element={<EN />} />
+          <Route path="/Project/GenFC" element={<GenFC />} />
         </Routes>
 
       </div>
