@@ -2,6 +2,13 @@ import React from 'react';
 
 const data = [
   {
+    year: "2025",
+    achievements: [
+      "[VJ] PULSE 2",
+      "[VJ] DEVOTION",
+    ],
+  },
+  {
     year: "2024",
     achievements: [
       "[DJ/VJ] upfn OLYMPICO Reception Party",
