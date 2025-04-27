@@ -1,6 +1,12 @@
 [
     {
         "src": "/images/GenFC/GenFC1.webp",
+        "alt": "DreamFootball",
+        "title": "DreamFootball",
+        "url": "/Project/DreamFootball"
+    },
+    {
+        "src": "/images/GenFC/GenFC1.webp",
         "alt": "GenFC",
         "title": "GenFC",
         "url": "/Project/GenFC"
