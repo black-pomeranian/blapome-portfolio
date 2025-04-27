@@ -1,14 +1,19 @@
-/DreamFootball/Build/*.gz
-  Content-Encoding: gzip
+/DreamFootball/Build/Build.framework.js
   Content-Type: application/javascript
+  Content-Encoding: gzip
   Cache-Control: public, max-age=31536000, immutable
 
-/DreamFootball/Build/*.data.gz
+/DreamFootball/Build/Build.loader.js
+  Content-Type: application/javascript
   Content-Encoding: gzip
+  Cache-Control: public, max-age=31536000, immutable
+
+/DreamFootball/Build/Build.data
   Content-Type: application/octet-stream
+  Content-Encoding: gzip
   Cache-Control: public, max-age=31536000, immutable
 
-/DreamFootball/Build/*.wasm.gz
-  Content-Encoding: gzip
+/DreamFootball/Build/Build.wasm
   Content-Type: application/wasm
+  Content-Encoding: gzip
   Cache-Control: public, max-age=31536000, immutable
