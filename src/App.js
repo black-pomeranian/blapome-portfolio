@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-//import HomePage from "./components/HomePage";
-import About from "./components/About";
 import Project from "./components/Project";
+import About from "./components/About";
 import Performance from "./components/Performance";
 import ProjectTemplate from "./components/Project/ProjectTemplate";
 import Portfolio from "./components/Project/Portfolio";
@@ -13,28 +12,27 @@ import AudioVisualBattleSystem from "./components/Project/AudioVisualBattleSyste
 import EN from "./components/Project/EN";
 import GenFC from "./components/Project/GenFC";
 import DreamFootball from "./components/Project/DreamFootball";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import DreamFootballGame from "./components/Project/DreamFootballGame";
+import NoHeaderLayout from "./components/NoHeaderLayout"; // 新しいレイアウトコンポーネントをインポート
 
 function App() {
   return (
     <Router>
       <div className="App ">
-        <Header />
-
         <Routes>
-          <Route path="/" element={<Project />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/performance" element={<Performance />} />
-          <Route path="/Project/ProjectTemplate" element={<ProjectTemplate />} />
-          <Route path="/Project/Portfolio" element={<Portfolio />} />
-          <Route path="/Project/VJSystem" element={<VJSystem />} />
-          <Route path="/Project/LieofMemories" element={<LieofMemories />} />
-          <Route path="/Project/AudioVisualBattleSystem" element={<AudioVisualBattleSystem />} />
-          <Route path="/Project/EN" element={<EN />} />
-          <Route path="/Project/GenFC" element={<GenFC />} />
-          <Route path="/Project/DreamFootball" element={<DreamFootball />} />
+          <Route path="/" element={<><Header /><Project /></>} />
+          <Route path="/about" element={<><Header /><About /></>} />
+          <Route path="/performance" element={<><Header /><Performance /></>} />
+          <Route path="/Project/ProjectTemplate" element={<><Header /><ProjectTemplate /></>} />
+          <Route path="/Project/Portfolio" element={<><Header /><Portfolio /></>} />
+          <Route path="/Project/VJSystem" element={<><Header /><VJSystem /></>} />
+          <Route path="/Project/LieofMemories" element={<><Header /><LieofMemories /></>} />
+          <Route path="/Project/AudioVisualBattleSystem" element={<><Header /><AudioVisualBattleSystem /></>} />
+          <Route path="/Project/EN" element={<><Header /><EN /></>} />
+          <Route path="/Project/GenFC" element={<><Header /><GenFC /></>} />
+          <Route path="/Project/DreamFootball" element={<><Header /><DreamFootball /></>} />
+          <Route path="/Project/DreamFootball/game" element={<NoHeaderLayout><DreamFootballGame /></NoHeaderLayout>} />
         </Routes>
-
       </div>
     </Router>
   );
