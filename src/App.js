@@ -13,6 +13,7 @@ import EN from "./components/Project/EN";
 import GenFC from "./components/Project/GenFC";
 import DreamFootball from "./components/Project/DreamFootball";
 import DreamFootballGame from "./components/Project/DreamFootballGame";
+import FFF from "./components/Project/FFF";
 import NoHeaderLayout from "./components/NoHeaderLayout"; // 新しいレイアウトコンポーネントをインポート
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/Project/GenFC" element={<><Header /><GenFC /></>} />
           <Route path="/Project/DreamFootball" element={<><Header /><DreamFootball /></>} />
           <Route path="/Project/DreamFootball/game" element={<NoHeaderLayout><DreamFootballGame /></NoHeaderLayout>} />
+          <Route path="/Project/FFF" element={<><Header /><FFF /></>}  />
         </Routes>
       </div>
     </Router>
