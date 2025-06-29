@@ -4,6 +4,9 @@ const data = [
   {
     year: "2025",
     achievements: [
+      "[VJ] TYU8周年祭｢ラブピー無限大♾️｣",
+      "[VJ] Marlene",
+      "[VJ] Blue",
       "[VJ] PLAYGROUND vol.9",
       "[VJ] 金曜日のテクノ",
       "[VJ] r108",
