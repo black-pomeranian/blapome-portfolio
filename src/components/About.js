@@ -36,20 +36,7 @@ const About = () => {
           <div className="sns">
             <div className="text-start mb-2 py-2">
               <ul>
-                <li>
-                  <a
-                    href="https://twitter.com/black_pomerania"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="d-block mb-1"
-                  >
-                    <img
-                      src={`${process.env.PUBLIC_URL}/images/Logo/logo-white.png`}
-                      alt="https://twitter.com/black_pomerania"
-                      className="snsImg"
-                    />
-                  </a>
-                </li>
+
                 <li>
                   <a
                     href="https://www.instagram.com/_black_pomeranian/"
