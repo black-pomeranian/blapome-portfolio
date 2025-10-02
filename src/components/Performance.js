@@ -53,14 +53,14 @@ const Performance = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="bg-orange-500 rounded-md p-6 mb-4 flex flex-col space-y-4"
+                className="bg-[#adff2f] rounded-md p-6 mb-4 flex flex-col space-y-4"
           >
             {/* 年の表示（黒文字） */}
-            <div className="bg-orange-500 font-bold text-xl lg:text-2xl text-black mb-2">{item.year}</div>
+            <div className="bg-[#adff2f] font-bold text-xl lg:text-2xl text-black mb-2">{item.year}</div>
             {/* 実績リスト（黒文字） */}
-            <div className="bg-orange-500 space-y-2 text-black">
+            <div className="bg-[#adff2f] space-y-2 text-black">
               {item.achievements.map((achievement, i) => (
-                <div key={i} className="bg-orange-500 text-black">{achievement}</div>
+                <div key={i} className="bg-[#adff2f] text-black">{achievement}</div>
               ))}
             </div>
           </div>
