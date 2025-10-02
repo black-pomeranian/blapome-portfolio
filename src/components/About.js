@@ -20,36 +20,25 @@ const About = () => {
 
           <p className="profile-jp text-start mb-1 py-2">
             米田凌。
-            プログラマー、VJ。サッカー、クラブカルチャー、認知科学をバックグラウンドに持つ。
-            これらの文脈を起点に、コードを用いた映像の制作、インタラクションを伴うシステムの開発、アイデアのプロトタイピングなどを行う。
-            また、イベント"EN"の主催も行う。
-            上記の活動を通じて、文化への貢献と実験的で寛容な場所の醸成を目指している。
+            プログラマ / VJ。
+            昼と夜、デジタルとアナログ、都市とローカル、人工物と自然などを越境する中で立ち現れた記憶や感情を大切にしています。
+            プログラマとして、ゲーム、Web、AI、VRなど、視覚に関連するものを横断的に制作しています。
+            また、VJとしては自作のVJソフトを用いてクラブやライブハウスでリアルタイムレンダリングの映像表現を行っています。
+            プログラミングに加え、3DCG、実写、生成AIなどあらゆるツールを用いています。
           </p>
           <p className="profile-en text-start py-2">
             Ryo Yoneda.
-            I am a programmer and VJ with a background in football, club culture, and cognitive science. 
-            I create visuals through coding, develop interactive systems, and prototype ideas. 
-            I also organize the event "EN." 
-            Through these activities, I aim to contribute to culture and foster experimental and inclusive spaces.          
+            Programmer / VJ.
+            I value the memories and feelings that arise from crossing the boundaries between day and night, digital and analog, city and country, and the artificial and the natural.
+            As a programmer, I create a wide variety of visual-related projects, spanning games, websites, AI, and VR.
+            I am also a VJ, performing real-time visual renderings at clubs and live venues with my own custom software.
+            Beyond programming, I use a diverse range of tools such as 3DCG, live-action video, and generative AI.      
           </p>
 
           <div className="sns">
             <div className="text-start mb-2 py-2">
               <ul>
-                <li>
-                  <a
-                    href="https://twitter.com/black_pomerania"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="d-block mb-1"
-                  >
-                    <img
-                      src={`${process.env.PUBLIC_URL}/images/Logo/logo-white.png`}
-                      alt="https://twitter.com/black_pomerania"
-                      className="snsImg"
-                    />
-                  </a>
-                </li>
+
                 <li>
                   <a
                     href="https://www.instagram.com/_black_pomeranian/"

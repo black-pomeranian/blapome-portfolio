@@ -4,7 +4,13 @@ const data = [
   {
     year: "2025",
     achievements: [
-      "[VJ] TYU8周年祭｢ラブピー無限大♾️｣",
+      "[VJ] GOODNEWS",
+      "[VJ] Five Feet Theater",
+      "[VJ] VOULT",
+      "[DJ] Preparation",
+      "[VJ] PLAYGROUND vol.10",
+      "[VJ] r180",
+      "[VJ] TYU8周年祭｢ラブピー無限大♾️",
       "[VJ] Marlene",
       "[VJ] Blue",
       "[VJ] PLAYGROUND vol.9",
@@ -42,16 +48,19 @@ const data = [
 
 const Performance = () => {
   return (
-    <div className="container h-screen flex justify-center items-center">
+    <div className="container h-screen flex justify-center pt-20">
       <div className="flex flex-col space-y-8 p-4 text-light">
         {data.map((item, index) => (
-          <div key={index} className="flex space-x-8">
-            {/* 年の表示 */}
-            <div className="w-20 font-bold text-xl lg:text-2xl text-light">{item.year}</div>
-            {/* 実績リスト */}
-            <div className="flex-1 space-y-2 text-light">
+          <div
+            key={index}
+                className="bg-[#adff2f] rounded-md p-6 mb-4 flex flex-col space-y-4"
+          >
+            {/* 年の表示（黒文字） */}
+            <div className="bg-[#adff2f] font-bold text-xl lg:text-2xl text-black mb-2">{item.year}</div>
+            {/* 実績リスト（黒文字） */}
+            <div className="bg-[#adff2f] space-y-2 text-black">
               {item.achievements.map((achievement, i) => (
-                <div key={i} className="">{achievement}</div>
+                <div key={i} className="bg-[#adff2f] text-black">{achievement}</div>
               ))}
             </div>
           </div>
