@@ -36,7 +36,7 @@ const About = () => {
           </p>
 
           <div className="sns">
-            <div className="text-start mb-2 py-2">
+            <div className="text-start mb-4 py-2">
               <ul>
 
                 <li>

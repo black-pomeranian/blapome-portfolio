@@ -289,6 +289,16 @@ header .box-area {
 }
 
 /* Home Page */
+
+.home-page-container {
+    /* 画面全体に広げる */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* 子要素の絶対配置の基準にする */
+    position: relative;
+}
+
 .blapome-image {
     /* 絶対配置 */
     position: absolute;
