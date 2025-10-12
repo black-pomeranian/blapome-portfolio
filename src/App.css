@@ -31,8 +31,8 @@ div {
 }
 
 ::selection {
-  background-color: #f82f2f; 
-  color: #3500d3;
+  background-color: #adff2f; 
+  color: #111111;
 }
 
 .App {
@@ -63,6 +63,8 @@ header {
   height: 90px;
   position: fixed;
   z-index: 10;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
 }
 
 header .title h3 {
