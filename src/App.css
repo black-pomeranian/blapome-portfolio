@@ -28,6 +28,7 @@ html {
 }
 div {
   background-color: #111111;
+
 }
 
 ::selection {
@@ -54,7 +55,7 @@ div {
 }
 
 /* Header */
-header {
+header .header-area {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,9 +63,16 @@ header {
   background-color: transparent;
   height: 90px;
   position: fixed;
-  z-index: 10;
+  z-index: 3;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 
+}
+
+.separator-line {
+  flex-grow: 1; /* 残りのスペースを全て占有するように引き伸ばす */
+  height: 1px; /* 線の太さ（高さ） */
+  background-color: rgb(255, 255, 255); /* 線の色（白で半透明など）*/
+  margin: 0 20px; /* titleとnav-toggleから線を少し離すための左右マージン */
 }
 
 header .title h3 {
@@ -139,6 +147,40 @@ nav ul li a {
 
 .nav.expanded .bar:nth-of-type(3) {
   transform: rotate(-45deg);
+}
+
+header .box-area {
+    /* 画面全体に表示し、ヘッダーの直下に固定配置 */
+    position: fixed;
+    top: 80px; /* ★ヘッダーの実際の高さに合わせて調整してください */
+    background-color: transparent;
+    /* 最前面に描画 */
+    z-index: 2; 
+
+    /* マージン、ボーダー、幅の計算を容易にする */
+    box-sizing: border-box; 
+
+    /* 下左右にボーダーを描画 */
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+
+    /* 下マージンは固定 */
+    margin-bottom: 20px;
+    
+    /* 高さ: 画面全体 - ヘッダーの高さ(50px) - 下マージン(20px) */
+    height: calc(100vh - 100px); 
+
+    /* ------------------------------------------- */
+    /* 左右のマージンにvwを使用（例: 画面幅の2%） */
+    /* ------------------------------------------- */
+    margin-left: 30px; 
+    margin-right: 30px;
+    
+    /* 幅: 100% - 左右マージンの合計 (2vw + 2vw = 4vw) */
+    width: calc(100vw - 60px);
+    
+    /* 配置: 左マージン分右にずらす */
 }
 
 @media (max-width: 768px) {
@@ -228,6 +270,36 @@ nav ul li a {
     transition: all 0.1s ease;
   }
   
+}
+
+/* Home Page */
+.blapome-image {
+    /* 絶対配置 */
+    position: absolute;
+    
+    /* 画面中央に配置するテクニック */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* キャンバスより手前に配置（前景レイヤー） */
+    z-index: 2; 
+    
+    /* 画像のサイズを調整 (必要に応じて変更してください) */
+    width: 30%;
+    min-width: 200px;
+    height: auto;
+}
+
+.p5-canvas-wrapper {
+    /* 親要素いっぱいに広げ、絶対配置 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 画像より奥に配置（背景レイヤー） */
+    z-index: 1;
 }
 
 
