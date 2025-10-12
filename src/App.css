@@ -42,16 +42,28 @@ div {
   width: 100%;
 }
 
-.container {
+.container, .container-fluid {
+  /* PC用 */
+  box-sizing: border-box; /* 追加 */
   height: 100vh;
-  width: 100vw;
-  padding: 120px;
+  width: 80vw;
+  padding: 120px; /* PCなど広い画面用のpadding */
 }
 
 .container-fluid {
   height: 100vh;
   width: 100vw;
   padding: 120px;
+}
+
+@media (max-width: 768px) {
+  /* スマホ用 */
+  .container, .container-fluid {
+    /* padding-leftとrightを小さくします。例: 20px */
+    padding: 120px 20px; 
+    /* または、上下のpaddingも調整するなら: */
+    /* padding: 60px 20px; */
+  }
 }
 
 /* Header */
