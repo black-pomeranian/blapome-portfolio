@@ -13,7 +13,7 @@ function Projects() {
   });
 
   return (
-    <div className="container">
+    <div className="container-fluid px-sm-2 px-md-4">
       <Row className="gx-4 gy-1">
         {projects.map((image, index) => (
           <Col md={6} key={index} className="mb-4">
