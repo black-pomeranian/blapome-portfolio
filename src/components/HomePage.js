@@ -6,13 +6,14 @@ import p5 from 'p5';
 // ----------------------------------------------------
 const sketch = (p) => {
   let pawprints = [];
-  const MAX_AGE = 90;  // 足跡が完全に消えるまでのフレーム数 (約1.5秒)
+  const MAX_AGE = 90;   // 足跡が完全に消えるまでのフレーム数 (約1.5秒)
   let isLeftPaw = true; 
   const distanceThreshold = 25; 
-  let isSetupComplete = false; // ★エラー対策: セットアップ完了フラグ
+  let isSetupComplete = false; // エラー対策: セットアップ完了フラグ
 
   p.setup = () => {
-    // キャンバスをウィンドウサイズいっぱいに作成
+    // p.windowWidthとp.windowHeightはビューポートサイズを参照するため、
+    // 親コンテナ（React側）をビューポート全体に広げることで全画面表示を実現
     p.createCanvas(p.windowWidth, p.windowHeight); 
     p.background('#111111');
     p.noStroke();
@@ -41,7 +42,7 @@ const sketch = (p) => {
         y: p.mouseY,
         birthFrame: p.frameCount,
         // 進行方向に向きを合わせるための角度調整
-        angle: angle + p.PI / 2,   
+        angle: angle + p.PI / 2,  
         isFlipped: isLeftPaw     
       };
       pawprints.push(newPaw);
@@ -73,22 +74,23 @@ const sketch = (p) => {
     p.push(); 
 
     p.translate(x, y); 
-    p.rotate(angle);   
+    p.rotate(angle);    
 
     if (isFlipped) {
       p.scale(-1, 1); // 左右反転を適用
     }
 
-    p.fill(50, alpha); 
+    // 透明度を適用したグレースケールで描画
+    p.fill(200, 200, 200, alpha); 
     p.text('🐾', 0, 0); 
 
     p.pop(); 
   };
   
-  // 4. ウィンドウサイズ変更時の処理 (エラー対策済み)
+  // 4. ウィンドウサイズ変更時の処理 
   p.windowResized = () => {
-    // セットアップが完了していることを確認してから実行
     if (isSetupComplete) { 
+      // ウィンドウサイズに合わせてキャンバスをリサイズ
       p.resizeCanvas(p.windowWidth, p.windowHeight);
       p.background('#111111'); 
     }
@@ -118,25 +120,32 @@ const HomePage = () => {
   }, []);
 
   return (
-    // p5.jsキャンバスと画像を重ねるためのコンテナ
-    <div className="container flex justify-center ">
+    // 【主要な修正点】最上位コンテナをビューポート全体に広げる (fixed inset-0)。
+    // これにより、p5.jsが参照するp.windowWidth/Heightが実質的な描画領域全体となります。
+    <div className="fixed inset-0 z-0 bg-gray-900 overflow-hidden">
 
-      <div className="home-page-container">
+      {/* home-page-containerはp5キャンバスと画像を重ねるためのコンテナとして、画面全体を占めます */}
+      <div className="w-full h-full relative">
         
-        {/* 1. p5.jsキャンバスを配置するコンテナ (背景レイヤー) */}
+        {/* 1. p5.jsキャンバスを配置するコンテナ (背景レイヤー) 
+             親要素いっぱいに広げるために絶対配置に設定
+        */}
         <div 
           ref={canvasRef} 
-          className="p5-canvas-wrapper"
+          className="absolute inset-0 p5-canvas-wrapper"
         />
 
         {/* 2. 画像を配置する要素 (前景レイヤー) */}
-        <img
-          src="/images/HomePage/blapome.png" // publicフォルダ直下からの相対パス
-          alt="Blapome"
-          className="blapome-image"
-        />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <img
+            src="/images/HomePage/blapome.png" // publicフォルダ直下からの相対パス
+            alt="Blapome"
+            className="blapome-image max-w-full max-h-full object-contain"
+          />
+        </div>
       </div>
-      </div>
+
+    </div>
 
   );
 };
