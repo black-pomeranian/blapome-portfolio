@@ -119,21 +119,25 @@ const HomePage = () => {
 
   return (
     // p5.jsキャンバスと画像を重ねるためのコンテナ
-    <div className="home-page-container">
-      
-      {/* 1. p5.jsキャンバスを配置するコンテナ (背景レイヤー) */}
-      <div 
-        ref={canvasRef} 
-        className="p5-canvas-wrapper"
-      />
+    <div className="container flex justify-center ">
 
-      {/* 2. 画像を配置する要素 (前景レイヤー) */}
-      <img
-        src="/images/HomePage/blapome.png" // publicフォルダ直下からの相対パス
-        alt="Blapome"
-        className="blapome-image"
-      />
-    </div>
+      <div className="home-page-container">
+        
+        {/* 1. p5.jsキャンバスを配置するコンテナ (背景レイヤー) */}
+        <div 
+          ref={canvasRef} 
+          className="p5-canvas-wrapper"
+        />
+
+        {/* 2. 画像を配置する要素 (前景レイヤー) */}
+        <img
+          src="/images/HomePage/blapome.png" // publicフォルダ直下からの相対パス
+          alt="Blapome"
+          className="blapome-image"
+        />
+      </div>
+      </div>
+
   );
 };
 
