@@ -197,6 +197,7 @@ header .box-area {
     width: calc(100vw - 60px);
     
     /* 配置: 左マージン分右にずらす */
+    pointer-events: none;
 }
 
 @media (max-width: 768px) {
