@@ -16,7 +16,7 @@ function Projects() {
 <div className="container px-sm-2 px-md-4"> 
     {/* gx-0 に変更し、カード間の左右のパディングを削除 */}
     {/* gy-1 (上下のガター) は残しておきます */}
-    <Row className="gx-0 gy-1 justify-content-center"> 
+    <Row className="gx-4 gy-1 justify-content-center"> 
       {projects.map((image, index) => (
         // sm={10} (スマホで幅10/12) に設定し、カードを小さくして、Rowの justify-content-center で中央寄せにする
         // md={5} はPCなどの表示を維持
