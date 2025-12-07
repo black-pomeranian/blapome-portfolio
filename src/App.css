@@ -454,6 +454,10 @@ header .box-area {
   font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
+.project{
+  padding: 0 5dvh;
+}
+
 .descliption-en{
   color: #f8f9fa;
   font-family: 'Zen Kaku Gothic New', sans-serif;
