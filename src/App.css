@@ -6,6 +6,40 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.body::before {
+  /* オーバーレイの基本設定 */
+  content: "";
+  position: fixed; /* スクロールしても常に画面全体を覆う */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* 注意: 要素セレクタの body に対して疑似要素を使う場合は 
+     `.body` (クラス) ではなく `body` (要素) を使います。下で修正しています。 */
+  /* body 要素自体の疑似要素を使うためセレクタは `body::before` にしてください */
+}
+
+body::before {
+  /* オーバーレイの基本設定 */
+  content: "";
+  position: fixed; /* スクロールしても常に画面全体を覆う */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* noise.jpg を `src/Images/noise.jpg` に配置した上で相対パスで参照します。
+     （webpack が src 以下のアセットを解決してバンドルします） */
+  background-image: url('./Images/noise.jpg');
+  background-repeat: repeat; /* 画像を画面全体に繰り返し敷き詰める */
+  background-repeat: repeat; /* 画像を画面全体に繰り返し敷き詰める */
+  
+  /* ノイズの濃さと影響の調整 */
+  opacity: 0.05; /* ノイズの濃さ（透明度）を調整。0.01～0.1程度が自然です */
+  pointer-events: none; /* 非常に重要！下のコンテンツのクリックを妨げないようにする */
+  z-index: 9999; /* ページ内の他のすべての要素の上に表示されるようにする */
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
