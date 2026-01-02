@@ -1,5 +1,35 @@
 [
     {
+        "src": "/images/r108/KV.png",
+        "alt": "r108フライヤー",
+        "title": "r108×A.O.R.B フライヤー",
+        "url": "/Project/r108"
+    },
+    {
+        "src": "/images/Sticker/KV.png",
+        "alt": "Sticker",
+        "title": "ブラックポメラニアン ステッカー",
+        "url": "/Project/Sticker"
+    },
+    {
+        "src": "/images/GOODNEWS/KV.png",
+        "alt": "GOODNEWS",
+        "title": "GOODNEWS リール動画",
+        "url": "/Project/GoodNews"
+    },
+    {
+        "src": "/images/FFF_Reel/KV.png",
+        "alt": "FFF Reel",
+        "title": "5 FEET FARM リール動画",
+        "url": "/Project/FFF_Reel"
+    },
+    {
+        "src": "/images/Podcast/KV.png",
+        "alt": "Podcast",
+        "title": "ブラックポメラニアンの犬小屋",
+        "url": "/Project/Podcast"
+    },
+    {
         "src": "/images/DreamFootball/KV.png",
         "alt": "DreamFootball",
         "title": "DreamFootball",

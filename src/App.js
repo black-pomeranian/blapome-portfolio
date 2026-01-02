@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
+import NoHeaderLayout from "./components/NoHeaderLayout"; // 新しいレイアウトコンポーネントをインポート
+
 import HomePage from "./components/HomePage";
 import Project from "./components/Project";
 import About from "./components/About";
@@ -15,7 +17,11 @@ import GenFC from "./components/Project/GenFC";
 import DreamFootball from "./components/Project/DreamFootball";
 import DreamFootballGame from "./components/Project/DreamFootballGame";
 import FFF from "./components/Project/FFF";
-import NoHeaderLayout from "./components/NoHeaderLayout"; // 新しいレイアウトコンポーネントをインポート
+import Podcast from "./components/Project/Podcast";
+import FFF_Real from "./components/Project/FFF_Reel";
+import R108 from "./components/Project/r108";
+import Sticker from "./components/Project/Sticker";
+import GOODNEWS from "./components/Project/GoodNews";
 
 function App() {
   return (
@@ -26,8 +32,8 @@ function App() {
           <Route path="/about" element={<><Header /><About /></>} />
           <Route path="/performance" element={<><Header /><Performance /></>} />
           <Route path="/project" element={<><Header /><Project /></>} />
-
           <Route path="/Project/ProjectTemplate" element={<><Header /><ProjectTemplate /></>} />
+          
           <Route path="/Project/Portfolio" element={<><Header /><Portfolio /></>} />
           <Route path="/Project/VJSystem" element={<><Header /><VJSystem /></>} />
           <Route path="/Project/LieofMemories" element={<><Header /><LieofMemories /></>} />
@@ -37,6 +43,12 @@ function App() {
           <Route path="/Project/DreamFootball" element={<><Header /><DreamFootball /></>} />
           <Route path="/Project/DreamFootball/game" element={<NoHeaderLayout><DreamFootballGame /></NoHeaderLayout>} />
           <Route path="/Project/FFF" element={<><Header /><FFF /></>}  />
+          <Route path="/Project/Podcast" element={<><Header /><Podcast /></>}  />
+          <Route path="/Project/FFF_Reel" element={<><Header /><FFF_Real /></>}  />
+          <Route path="/Project/r108" element={<><Header /><R108 /></>}  />
+          <Route path="/Project/Sticker" element={<><Header /><Sticker /></>}  />
+          <Route path="/Project/GoodNews" element={<><Header /><GOODNEWS /></>}  />
+
         </Routes>
       </div>
     </Router>
