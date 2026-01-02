@@ -31,16 +31,17 @@ const r108 = () => {
         <div className="row justify-content-center">
           <div className="descliption-jp col-12 col-md-8">
             <p>
-              クリエイティブコレクティブ「5 FEET FARM」のロゴを制作。<br></br>
-              コレクティブ名にもあるファームを定義する檻をモチーフにした。<br></br>
-              さらに、クライアントのリクエストや同時代性の強調のために、クロムタイプっぽさを付与した。<br></br>
+              中目黒のHVENにて開催されたr108×A.O.R.Bの告知用フライヤー。<br></br>
+              過去に同場所で開催された際の写真をサンプリングして作成されたノイズの動画を使用。<br></br>
+              90年代のクラブフライヤーを意識したデザインに仕上げた。<br></br>
+
             </p>
           </div>
           <div className="descliption-en col-12 col-md-8">
             <p>
-            Created the logo for the creative collective "5 FEET FARM".<br></br>
-            The design is inspired by a cage, symbolizing the "farm" referenced in the collective's name.<br></br>
-            Additionally, a chrome-like style was added to reflect the client's request and emphasize a contemporary feel.<br></br>
+            Created the flyer for the event "r108×A.O.R.B" held at HVEN in Nakameguro.<br></br>
+            A noise video created by sampling photos from a previous event at the same venue was used.<br></br>
+            The design was completed with an aesthetic inspired by 90s club flyers.<br></br>
             </p>
           </div>
           <div className="credit col-12 col-md-8 py-2">

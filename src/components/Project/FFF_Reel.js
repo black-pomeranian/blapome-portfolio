@@ -18,7 +18,10 @@ const FFF_Real = () => {
         {/* 画像 */}
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/FFF_Reel/fff_reel.webp`} alt="FFF's reel" className="img-fluid small-image d-block mx-auto py-1 half-size" />
+            <video className="img-fluid small-image d-block mx-auto py-1 half-size" controls loop muted playsInline>
+              <source src={`${process.env.PUBLIC_URL}/images/FFF_Reel/reel.mp4`} type="video/mp4" />
+              お使いのブラウザは動画タグに対応していません。
+            </video>
           </div>
         </div>
 
