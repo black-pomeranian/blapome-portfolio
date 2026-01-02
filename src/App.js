@@ -18,7 +18,7 @@ import DreamFootball from "./components/Project/DreamFootball";
 import DreamFootballGame from "./components/Project/DreamFootballGame";
 import FFF from "./components/Project/FFF";
 import Podcast from "./components/Project/Podcast";
-import FFF_Real from "./components/Project/FFF_Reel";
+import FFFReel from "./components/Project/FFF_Reel";
 import R108 from "./components/Project/r108";
 import Sticker from "./components/Project/Sticker";
 import GOODNEWS from "./components/Project/GoodNews";
@@ -44,7 +44,7 @@ function App() {
           <Route path="/Project/DreamFootball/game" element={<NoHeaderLayout><DreamFootballGame /></NoHeaderLayout>} />
           <Route path="/Project/FFF" element={<><Header /><FFF /></>}  />
           <Route path="/Project/Podcast" element={<><Header /><Podcast /></>}  />
-          <Route path="/Project/FFF_Reel" element={<><Header /><FFF_Real /></>}  />
+          <Route path="/Project/FFF_Reel" element={<><Header /><FFFReel /></>}  />
           <Route path="/Project/r108" element={<><Header /><R108 /></>}  />
           <Route path="/Project/Sticker" element={<><Header /><Sticker /></>}  />
           <Route path="/Project/GoodNews" element={<><Header /><GOODNEWS /></>}  />
