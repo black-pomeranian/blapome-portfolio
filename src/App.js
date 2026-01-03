@@ -23,6 +23,7 @@ import FFFReel from "./components/Project/FFF_Reel";
 import R108 from "./components/Project/r108";
 import Sticker from "./components/Project/Sticker";
 import GOODNEWS from "./components/Project/GoodNews";
+import Portfolio2 from "./components/Project/Portfolio2";
 
 function App() {
   return (
@@ -50,7 +51,7 @@ function App() {
           <Route path="/Project/r108" element={<><Header /><R108 /></>}  />
           <Route path="/Project/Sticker" element={<><Header /><Sticker /></>}  />
           <Route path="/Project/GoodNews" element={<><Header /><GOODNEWS /></>}  />
-
+          <Route path="/Project/Portfolio2" element={<><Header /><Portfolio2 /></>}  />
         </Routes>
       </div>
     </Router>
