@@ -52,16 +52,15 @@ code {
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&family=Zen+Kaku+Gothic+New&display=swap');
 
 :root {
-  --black-color: #010000;
+  --black-color: #01000000;
   --white-color: #ffffff;
   --lightgray-color: #e6e6e6;
 }
 html {
-  background-color: #111111;
-
+  background-color: #11111100;
 }
 div {
-  background-color: #111111;
+  background-color: #11111100;
 
 }
 

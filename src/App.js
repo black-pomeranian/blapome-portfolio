@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import NoHeaderLayout from "./components/NoHeaderLayout"; // 新しいレイアウトコンポーネントをインポート
+import P5Background from "./components/P5Background";
 
 import HomePage from "./components/HomePage";
 import Project from "./components/Project";
@@ -27,6 +28,7 @@ function App() {
   return (
     <Router>
       <div className="App ">
+        <P5Background />
         <Routes>
           <Route path="/" element={<><Header /><HomePage /></>} />
           <Route path="/about" element={<><Header /><About /></>} />
