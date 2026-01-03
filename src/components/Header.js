@@ -36,9 +36,7 @@ const Header = () => {
         </ul>
       </nav>
       </div>
-      <div className="box-area">
-        
-      </div>
+
     </header>
   );
 };

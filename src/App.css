@@ -115,7 +115,7 @@ header .header-area {
 
 .separator-line {
   flex-grow: 1; /* 残りのスペースを全て占有するように引き伸ばす */
-  height: 1px; /* 線の太さ（高さ） */
+  height: 3px; /* 線の太さ（高さ） */
   background-color: rgb(255, 255, 255); /* 線の色（白で半透明など）*/
   margin: 0 20px; /* titleとnav-toggleから線を少し離すための左右マージン */
 }
@@ -210,9 +210,9 @@ header .box-area {
     box-sizing: border-box; 
 
     /* 下左右にボーダーを描画 */
-    border-bottom: 1px solid rgb(255, 255, 255);
-    border-left: 1px solid rgb(255, 255, 255);
-    border-right: 1px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    border-left: 3px solid rgb(255, 255, 255);
+    border-right: 3px solid rgb(255, 255, 255);
 
     /* 下マージンは固定 */
     margin-bottom: 20px;
@@ -332,6 +332,7 @@ header .box-area {
     /* 子要素の絶対配置の基準にする */
     position: relative;
 }
+.home-title-text { font-family: 'Ubuntu', sans-serif; }
 
 .blapome-image {
     /* 絶対配置 */
@@ -516,4 +517,19 @@ header .box-area {
 
 .half-size {
   width: 50%;
+}
+
+/* Home title: make text occupy ~80% of viewport width and scale responsively */
+.home-title-text {
+  display: inline-block;
+  width: 80vw;
+  white-space: nowrap;
+  text-align: center;
+  font-size: clamp(25px, 8vw, 5000px);
+  line-height: 1;
+}
+.home-links {
+  font-family: 'Ubuntu', sans-serif;
+  width: 80vw;
+  font-size: clamp(15px, 5vw, 5000px);
 }
