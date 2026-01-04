@@ -68,13 +68,13 @@ const About = () => {
                 </li>
                 <li>
                   <a
-                    href="mailto:black.pomera@gmail.com"
+                    href="mailto:info@black-pomeranian.com"
                     rel="noopener noreferrer"
                     className="d-block mb-1"
                   >
                     <img
                       src={`${process.env.PUBLIC_URL}/images/Logo/mail.png`}
-                      alt="black.pomera@gmail.com"
+                      alt="info@black-pomeranian.com"
                       className="snsImg"
                     />
                   </a>
