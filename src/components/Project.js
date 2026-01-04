@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import projectsData from '../projects.json';
@@ -12,6 +12,30 @@ function Projects() {
     };
   });
 
+  const itemRefs = useRef([]);
+
+  useEffect(() => {
+    itemRefs.current = itemRefs.current.slice(0, projects.length);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    itemRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [projects.length]);
+
   return (
 <div className="container px-sm-2 px-md-4"> 
     {/* gx-0 に変更し、カード間の左右のパディングを削除 */}
@@ -20,14 +44,21 @@ function Projects() {
       {projects.map((image, index) => (
         // sm={10} (スマホで幅10/12) に設定し、カードを小さくして、Rowの justify-content-center で中央寄せにする
         // md={5} はPCなどの表示を維持
-        <Col xs={10} sm={10} md={5} key={index} className="mb-4"> 
-            <Link to={image.url}>
-              <div className="image-overlay-container card-aspect-ratio">
-                <img src={image.src} alt={image.alt} className="img-fluid img-rounded" />
-                <div className="image-overlay"></div>
-              </div>
-            </Link>
-            <p className="project-title">{image.title}</p>
+        <Col
+          xs={10}
+          sm={10}
+          md={5}
+          key={index}
+          className="mb-4 fade-item"
+          ref={(el) => (itemRefs.current[index] = el)}
+        >
+          <Link to={image.url}>
+            <div className="image-overlay-container card-aspect-ratio">
+              <img src={image.src} alt={image.alt} className="img-fluid img-rounded" />
+              <div className="image-overlay"></div>
+            </div>
+          </Link>
+          <p className="project-title">{image.title}</p>
 
           </Col>
         ))}
