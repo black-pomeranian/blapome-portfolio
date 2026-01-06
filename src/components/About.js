@@ -19,20 +19,25 @@ const About = () => {
           <h1 className="about-title text-start mb-3">Black Pomeranian</h1>
 
           <p className="profile-jp text-start mb-1 py-2">
-            米田凌。
             プログラマ / VJ / DJ。
-            昼と夜、デジタルとアナログ、都市とローカル、人工物と自然などを越境する中で立ち現れた記憶や感情を大切にしています。
-            プログラマとして、ゲーム、Web、AI、VRなど、視覚に関連するものを横断的に制作しています。
-            また、VJとしては自作のVJソフトを用いてクラブやライブハウスでリアルタイムレンダリングの映像表現を行っています。
-            プログラミングに加え、3DCG、実写、生成AIなどあらゆるツールを用いています。
+            クラブやライブの映像演出やデザインの制作、インタラクティブコンテンツの開発等を手掛ける。
+            プログラマとして、ゲーム、Web、AI、VRなど、視覚に関連するものを横断的に制作。
+            制作では、コードを中心としつつも、3DCG、実写、生成AIなどあらゆるツールを用いている。
+            VJとしては自作のVJソフトを用いてクラブやライブハウスでリアルタイムレンダリングの映像表現を行っている。
+            DJでは、テクノを軸としたレベルミュージックをプレイしている。
+            昼と夜、デジタルとアナログ、都市とローカル、人工物と自然などを越境する過程で残された記憶や感情をもとに活動している。
+            既存の仕組みの内部から立ち上がり、既存の仕組みに対するつまらなさを破壊したい。
+
           </p>
           <p className="profile-en text-start py-2">
-            Ryo Yoneda.
             Programmer / VJ / DJ.
-            I value the memories and feelings that arise from crossing the boundaries between day and night, digital and analog, city and country, and the artificial and the natural.
-            As a programmer, I create a wide variety of visual-related projects, spanning games, websites, AI, and VR.
-            I am also a VJ, performing real-time visual renderings at clubs and live venues with my own custom software.
-            Beyond programming, I use a diverse range of tools such as 3DCG, live-action video, and generative AI.      
+            Engaged in video production and design production for clubs and live performances, as well as the development of interactive content.
+            As a programmer, I create games, web, AI, VR, and other visually related works in a cross-sectional manner.
+            In production, I mainly use code, but also utilize various tools such as 3DCG, live-action footage, and generative AI.
+            As a VJ, I use my own VJ software to create real-time rendered video expressions in clubs and live houses.
+            As a DJ, I play level music centered around techno.
+            My activities are based on memories and emotions left behind in the process of crossing over between day and night, digital and analog, urban and local, artificial and natural.
+            I want to rise from within existing systems and destroy the boredom towards them.
           </p>
 
           <div className="sns">
