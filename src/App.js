@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import NoHeaderLayout from "./components/NoHeaderLayout"; // 新しいレイアウトコンポーネントをインポート
@@ -52,6 +52,7 @@ function App() {
           <Route path="/Project/Sticker" element={<><Header /><Sticker /></>}  />
           <Route path="/Project/GoodNews" element={<><Header /><GOODNEWS /></>}  />
           <Route path="/Project/Portfolio2" element={<><Header /><Portfolio2 /></>}  />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </Router>
