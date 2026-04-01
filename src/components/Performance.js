@@ -4,8 +4,12 @@ const data = [
     {
     year: "2026",
     achievements: [
-      { role: "DJ", date: "03.28", title: "TBA", location: "" },
-      { role: "DJ", date: "03.28", title: "TBA", location: "" },
+      { role: "DJ", date: "05.15", title: "TBA", location: "" },
+      { role: "DJ", date: "05.08", title: "TBA", location: "" },
+      { role: "DJ", date: "04.25", title: "TBA", location: "" },
+      { role: "VJ", date: "04.24", title: "MOUV", location: "SPREAD" },
+      { role: "DJ", date: "03.28", title: "TOWNIC", location: "NEOTENY" },
+      { role: "DJ", date: "03.28", title: "GG Party", location: "ハラカド" },
       { role: "VJ", date: "03.27", title: "底", location: "大塚地底" },
       { role: "DL/VJ", date: "03.20", title: "moooood", location: "渋谷roots" },
       { role: "VJ", date: "03.13", title: "r108", location: "不眠遊戯ライオン" },
@@ -13,7 +17,7 @@ const data = [
       { role: "DJ", date: "02.27", title: "金曜日のテクノ", location: "神保町肆-YON-" },
       { role: "DJ", date: "02.21", title: "オイシイ水餃子クラブ1周年パーティー", location: "オイシイ水餃子クラブ" },
       { role: "VJ", date: "02.06", title: "defo", location: "Saloon" },
-      { role: "VJ", date: "01.31", title: "Thir(s)ty One", location: "Park in Oark" },
+      { role: "VJ", date: "01.31", title: "Thir(s)ty One", location: "Park in Park" },
       { role: "DJ/VJ", date: "01.17", title: "moooood", location: "渋谷roots" },
     ],
   },
