@@ -1,5 +1,23 @@
 [
     {
+        "src": "/images/DOM-VJ/KV.jpg",
+        "alt": "DOM-VJ KV",
+        "title": "DOM-VJ",
+        "url": "/Project/DOM-VJ"
+    },
+    {
+        "src": "/images/",
+        "alt": "ふすまのやつ",
+        "title": "ふすまのやつ",
+        "url": "/Project/"
+    },
+    {
+        "src": "/images/",
+        "alt": "犬のデータセットのやつ",
+        "title": "犬のデータセットのやつ",
+        "url": "/Project/"
+    },
+    {
         "src": "/images/Portfolio2/KV.png",
         "alt": "Webサイトサイトの更新",
         "title": "Webサイトの更新",
@@ -59,6 +77,7 @@
         "title": "EN",
         "url": "/Project/EN"
     },
+
     {
         "src": "/images/AVBattle/playing.webp",
         "alt": "Audio Visual Battle",

@@ -24,6 +24,7 @@ import R108 from "./components/Project/r108";
 import Sticker from "./components/Project/Sticker";
 import GOODNEWS from "./components/Project/GoodNews";
 import Portfolio2 from "./components/Project/Portfolio2";
+import DOMVJ from "./components/Project/DOM-VJ";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/Project/EN" element={<><Header /><EN /></>} />
           <Route path="/Project/GenFC" element={<><Header /><GenFC /></>} />
           <Route path="/Project/DreamFootball" element={<><Header /><DreamFootball /></>} />
+          <Route path="/Project/DOM-VJ" element={<><Header /><DOMVJ /></>} />
           <Route path="/Project/DreamFootball/game" element={<NoHeaderLayout><DreamFootballGame /></NoHeaderLayout>} />
           <Route path="/Project/FFF" element={<><Header /><FFF /></>}  />
           <Route path="/Project/Podcast" element={<><Header /><Podcast /></>}  />
