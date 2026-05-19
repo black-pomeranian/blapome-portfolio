@@ -6,17 +6,12 @@
         "url": "/Project/DOM-VJ"
     },
     {
-        "src": "/images/",
-        "alt": "ふすまのやつ",
-        "title": "ふすまのやつ",
-        "url": "/Project/"
+        "src": "/images/DogDetection/dog-1-10.webp",
+        "alt": "Dog Detection",
+        "title": "Dog Detection",
+        "url": "/Project/DogDetection"
     },
-    {
-        "src": "/images/",
-        "alt": "犬のデータセットのやつ",
-        "title": "犬のデータセットのやつ",
-        "url": "/Project/"
-    },
+
     {
         "src": "/images/Portfolio2/KV.png",
         "alt": "Webサイトサイトの更新",
