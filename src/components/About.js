@@ -20,20 +20,21 @@ const About = () => {
 
           <p className="profile-jp text-start mb-1 py-2">
             プログラマ / VJ / DJ。
+            認知科学の研究、プログラミングの経験、クラブカルチャーからの影響を基盤に活動を行う。
             インスタレーションを中心に、ゲーム、Web、AI、VR、映像など、視覚に関連するものを横断的に制作。
-            コードを中心としつつも、3DCG、実写、生成AIなどあらゆるツールを用いて制作。
+            コードを中心としつつも、3DCG、実写、生成AIなどあらゆるツールを使用。
             VJとしては、自作のVJソフトを用いて都内のアンダーグラウンドなクラブやライブハウスで活動。
             その際、音響解析の結果をその場で映像に反映するリアルタイムレンダリングの手法を主に用いている。
             DJでは、暗く反復的なテクノの影響を強く受けつつも、ベースミュージックやレフトフィールド、ハウスなどジャンルレスにミックス。
-
           </p>
           <p className="profile-en text-start py-2">
             Programmer / VJ / DJ.
+            Based on research in cognitive science, programming experience, and influence from club culture.
             I create installations, games, web, AI, VR, videos, and more, using a wide range of tools including code, 3DCG, live-action footage, and generative AI.
             As a VJ, I perform at underground clubs and live houses in Tokyo using my own VJ software, primarily utilizing real-time rendering techniques that reflect audio analysis results in the visuals on the spot.
             As a DJ, I mix genre-less music influenced by dark and repetitive techno, bass music, leftfield, house, and more.
           </p>
-
+          
           <div className="sns">
             <div className="text-start mb-4 py-2">
               <ul>
