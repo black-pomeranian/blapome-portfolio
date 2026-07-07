@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find public/images -name *.webp -size +25M -ls)",
+      "Bash(find public/images -name *.webp)",
+      "Bash(xargs ls:*)",
+      "Bash(cwebp -version)",
+      "Bash(ffmpeg -version)",
+      "Bash(magick --version)",
+      "Bash(python -c \"from PIL import Image; print\\(''Pillow OK''\\)\")",
+      "Bash(python:*)"
+    ]
+  }
+}
