@@ -4,7 +4,7 @@ const data = [
     {
     year: "2026",
     achievements: [
-      { role: "VJ", date: "08.29", title: "Kurama", location: "Forest Limit" },
+      { role: "VJ", date: "08.29", title: "Kurama", location: "FORESTLIMIT" },
       { role: "VJ", date: "07.25", title: "TYU Q周年", location: "磐田駅前北口広場" },
       { role: "DJ", date: "07.17", title: "Moooood", location: "渋谷roots" },
       { role: "VJ", date: "06.07", title: "r108", location: "不眠遊戯ライオン" },
