@@ -5,38 +5,38 @@ const DOMVJ = () => {
   const movs = [1,2,3,4,5,6];
 
   return (
-    <div className="container">
+    <main className="container">
 
-      <div className='project'>
+      <article className='project'>
         {/* タイトル */}
-        <div className="row mb-4 justify-content-center">
+        <header className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
             <h1 className="project-title text-left">DOM-VJ</h1>
-            <p className="text-left date">2026.05</p>
+            <p className="text-left date"><time dateTime="2026-05">2026.05</time></p>
           </div>
-        </div>
+        </header>
 
         {/* メイン画像 */}
 
 
         {/* ギャラリー */}
-          <div className="row mb-4 justify-content-center">
+          <section className="row mb-4 justify-content-center" aria-label="作品ギャラリー">
             <div className="col-12 col-md-8">
               {movs.map(n => (
                 <div key={n} className="w-100 mb-3 text-center">
                   <img
                     src={`${process.env.PUBLIC_URL}/images/DOM-VJ/mov${n}.webp`}
-                    alt={`DOM-VJ ${n}`}
+                    alt={`Chrome拡張「DOM-VJ」のデモ${n}：音楽の解析結果に合わせてWebサイトのDOM要素が動くリアルタイム演出`}
                     className="img-fluid d-block mx-auto"
                   />
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
         {/* 説明 */}
-        <div className="row justify-content-center">
-          <div className="descliption-jp col-12 col-md-8">
+        <section className="row justify-content-center" aria-label="作品説明">
+          <div className="descliption-jp col-12 col-md-8" lang="ja">
             <p>
               コンピューターやプログラミング、及びハッカーは昔、分散・自由・反権威と強く結びついてたいたようです。<br></br>
               思い返してみると、小学生になりたての頃に実家のパソコンで見ていたものは、どこの誰かも分からない人物が作った自作のWEBサイトでした。<br></br>
@@ -52,7 +52,7 @@ const DOMVJ = () => {
               このChrome拡張では、入力された音を解析し、WEBの構成要素に設定された動きをさせます。
             </p>
           </div>
-          <div className="descliption-en col-12 col-md-8">
+          <div className="descliption-en col-12 col-md-8" lang="en">
             <p>
               Computers, programming, and hackers were once strongly associated with decentralization, freedom, and anti-authoritarianism.<br></br>
               Looking back, when I first started elementary school, what I saw on my family's computer were self-made websites created by unknown individuals.<br></br>
@@ -64,7 +64,7 @@ const DOMVJ = () => {
               This Chrome extension analyzes the input sound and makes the elements of the web move accordingly.
             </p>
           </div>
-          <div className="credit col-12 col-md-8 py-2">
+          <footer className="credit col-12 col-md-8 py-2">
             <p>
               Credit<br></br>
               All: Black Pomeranian
@@ -72,10 +72,10 @@ const DOMVJ = () => {
             <p>
               GitHub: <a href="https://github.com/black-pomeranian/DOM-VJ" target="_blank" rel="noopener noreferrer">https://github.com/black-pomeranian/DOM-VJ</a>
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
+          </footer>
+        </section>
+      </article>
+    </main>
   )
 }
 

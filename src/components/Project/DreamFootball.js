@@ -4,27 +4,27 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AudioVisualBattleSystem = () => {
   return (
-    <div className="container">
+    <main className="container">
 
-        <div className='project'>
+        <article className='project'>
         {/* タイトル */}
-        <div className="row mb-4 justify-content-center">
+        <header className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
             <h1 className="project-title text-left">BENE Dream Football</h1>
-            <p className="text-left date">2025.5</p>
+            <p className="text-left date"><time dateTime="2025-05">2025.5</time></p>
           </div>
-        </div>
+        </header>
 
         {/* 画像 */}
-        <div className="row mb-4 justify-content-center">
+        <section className="row mb-4 justify-content-center" aria-label="作品ギャラリー">
           <div className="col-12 col-md-8">
-            <video controls src={`${process.env.PUBLIC_URL}/images/DreamFootball/bene-game.mp4`} alt="Playing Video" className="img-fluid py-1" />
-            <Link to="/Project/DreamFootball/game" className="header-link" >Play</Link>
+            <video controls src={`${process.env.PUBLIC_URL}/images/DreamFootball/bene-game.mp4`} aria-label="BENE Dream Football（PS1風グラフィックスのUnity製PKゲーム）のプレイ動画" className="img-fluid py-1" />
+            <Link to="/Project/DreamFootball/game" className="header-link" aria-label="ブラウザでBENE Dream Footballをプレイする">Play</Link>
           </div>
-        </div>
+        </section>
         {/* 説明 */}
-        <div className="row justify-content-center">
-          <div className="descliption-jp col-12 col-md-8">
+        <section className="row justify-content-center" aria-label="作品説明">
+          <div className="descliption-jp col-12 col-md-8" lang="ja">
             <p>
               Football Game for BENE(<a href="https://www.instagram.com/bene.ec/">@bene.ec</a>)<br></br>
               bene fc(<a href="https://www.instagram.com/bene.ec/">@bene.fc</a>)のユニフォームを着たプレイヤーで遊べるPKゲーム。<br></br>
@@ -34,7 +34,7 @@ const AudioVisualBattleSystem = () => {
               ゲームシステムからデザインまで作成。<br></br>
             </p>
           </div>
-          <div className="descliption-en col-12 col-md-8">
+          <div className="descliption-en col-12 col-md-8" lang="en">
             <p>
                Football Game for BENE(<a href="https://www.instagram.com/bene.ec/">@bene.ec</a>)<br></br>
                A PK game where you can play as a player wearing the bene fc (<a href="https://www.instagram.com/bene.ec/">@bene.fc</a>) uniform.<br></br>
@@ -44,16 +44,16 @@ const AudioVisualBattleSystem = () => {
               Everything from game system to design was created from scratch.<br></br>
             </p>
           </div>
-          <div className="credit col-12 col-md-8 py-2">
+          <footer className="credit col-12 col-md-8 py-2">
             <p>
               Credit<br></br>
               ディレクター、開発（ビジュアル）、デザイン：Black Pomeranian<br></br>
               開発（Uゲームロジック）：maruken<br></br>
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
+          </footer>
+        </section>
+      </article>
+    </main>
   )
 }
 

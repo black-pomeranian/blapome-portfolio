@@ -81,29 +81,31 @@ const data = [
 
 const Performance = () => {
   return (
-    <div className="container h-screen flex justify-center pt-20">
+    <main className="container h-screen flex justify-center pt-20">
+      {/* 視覚には表示されないページ見出し（検索エンジン・AI・スクリーンリーダー向け） */}
+      <h1 className="visually-hidden">Performance — Black Pomeranian の VJ / DJ 出演履歴</h1>
       <div className="flex flex-col space-y-8 p-4 text-light">
         {data.map((item, index) => (
-          <div key={index} className="rounded-md p-6 mb-4">
-            <div className="font-bold text-xl lg:text-xl mb-1">{item.year}</div>
-            <div className="space-y-3">
+          <section key={index} className="rounded-md p-6 mb-4" aria-label={`${item.year}年の出演履歴`}>
+            <h2 className="font-bold text-xl lg:text-xl mb-1" style={{ marginTop: 0 }}>{item.year}</h2>
+            <ul className="space-y-3" style={{ listStyle: 'none', paddingLeft: 0, marginBottom: 0 }}>
               {item.achievements.map((achievement, i) => {
                 // 互換性のため、文字列とオブジェクトの両方を許容
                 if (typeof achievement === 'string') {
                   return (
-                    <div key={i} className="flex justify-between">
+                    <li key={i} className="flex justify-between">
                       <div className="text-base">{achievement}</div>
                       <div className="text-sm text-gray-400" />
-                    </div>
+                    </li>
                   );
                 }
 
                 const { role, date, title, location } = achievement;
                 return (
-                  <div key={i} className="flex flex-col">
+                  <li key={i} className="flex flex-col">
                     <div className="text-base font-medium flex items-center flex-wrap">
                       <span className="mr-2">[{role}]</span>
-                      <span className="mr-2">{date}</span>
+                      <time className="mr-2" dateTime={`${item.year}-${date.replace('.', '-')}`}>{date}</time>
                       {location && (
                         <span className="text-base font-medium flex items-center">
                           <span>{location}</span>
@@ -111,14 +113,14 @@ const Performance = () => {
                       )}
                     </div>
                     <div className="text-lg">{title}</div>
-                  </div>
+                  </li>
                 );
               })}
-            </div>
-          </div>
+            </ul>
+          </section>
         ))}
       </div>
-    </div>
+    </main>
   );
 };
 

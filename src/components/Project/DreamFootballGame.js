@@ -24,17 +24,17 @@ const DreamFootballGame = () => {
   }, []);
 
   return (
-    <div className="container text-center">
+    <main className="container text-center">
       <iframe
         src="/DreamFootball/index.html"
-        title="Dream Football"
+        title="BENE Dream Football — Unity製WebGLのPKサッカーゲーム（ブラウザでプレイ可能）"
         width="960"
         height="600"
         frameBorder="0"
         scrolling="no"
         style={{ border: 'none' }}
       ></iframe>
-    </div>
+    </main>
   );
 };
 

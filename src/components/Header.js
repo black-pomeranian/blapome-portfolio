@@ -7,11 +7,18 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-area">
-        <Link to="/" className="title">
-          <h3 className="text-light header-title"><nobr>𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</nobr></h3>
+        <Link to="/" className="title" aria-label="Black Pomeranian（ブラックポメラニアン）ホームへ戻る">
+          {/* 装飾文字（Mathematical Fraktur）はスクリーンリーダー・検索エンジンが読めないため aria-hidden とし、名前は Link の aria-label で提供する */}
+          <h3 className="text-light header-title" aria-hidden="true"><span style={{ whiteSpace: 'nowrap' }}>𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</span></h3>
         </Link>
-        <div className="separator-line"></div>
-        <button className="nav-toggle" onClick={() => setIsNavExpanded(!isNavExpanded)}>
+        <div className="separator-line" aria-hidden="true"></div>
+        <button
+          className="nav-toggle"
+          onClick={() => setIsNavExpanded(!isNavExpanded)}
+          aria-label="メニューを開閉"
+          aria-expanded={isNavExpanded}
+          aria-controls="global-nav"
+        >
           {isNavExpanded ? (
             <span className="menu-icon close"></span> 
           ) : (
@@ -22,7 +29,7 @@ const Header = () => {
             </>
           )}
       </button>
-      <nav className={`nav ${isNavExpanded ? "expanded" : ""}`}>
+      <nav id="global-nav" className={`nav ${isNavExpanded ? "expanded" : ""}`} aria-label="サイト内ナビゲーション">
         <ul>
           <li>
             <Link to="/about" className="header-link" onClick={() => setIsNavExpanded(false)}>About</Link>

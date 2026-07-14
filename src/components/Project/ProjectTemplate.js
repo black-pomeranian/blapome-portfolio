@@ -3,48 +3,48 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ProjectTemplate = () => {
   return (
-    <div className="container">
+    <main className="container">
 
-        <div className='project'>
+        <article className='project'>
         {/* タイトル */}
-        <div className="row mb-4 justify-content-center">
+        <header className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
             <h1 className="project-title text-left">Title</h1>
-            <p className="text-left date">日付</p>
+            <p className="text-left date"><time dateTime="2026-01">日付</time></p>
 
           </div>
-        </div>
+        </header>
 
         {/* 画像 */}
-        <div className="row mb-4 justify-content-center">
+        <section className="row mb-4 justify-content-center" aria-label="作品ギャラリー">
           <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/profile.png`} alt="sample" className="img-fluid" />
+            <img src={`${process.env.PUBLIC_URL}/images/profile.png`} alt="作品の内容（誰が・何を・どの技術で）を具体的に記述する" className="img-fluid" />
           </div>
-        </div>
+        </section>
 
         {/* 説明 */}
-        <div className="row justify-content-center">
-          <div className="descliption-jp col-12 col-md-8 py-2">
+        <section className="row justify-content-center" aria-label="作品説明">
+          <div className="descliption-jp col-12 col-md-8 py-2" lang="ja">
             <p>
               説明文がここに入ります。
             </p>
           </div>
-          <div className="descliption-en col-12 col-md-8 py-2">
+          <div className="descliption-en col-12 col-md-8 py-2" lang="en">
             <p>
               Here is Explanation
             </p>
           </div>
 
-          <div className="credit col-12 col-md-8 py-2">
+          <footer className="credit col-12 col-md-8 py-2">
             <p>
               Credit<br></br>
               aaa：Black Pomeranian<br></br>
               bbb：山田<br></br>
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
+          </footer>
+        </section>
+      </article>
+    </main>
   )
 }
 

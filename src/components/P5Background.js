@@ -83,6 +83,11 @@ const P5Background = () => {
   const p5InstanceRef = useRef(null);
 
   useEffect(() => {
+    // react-snap によるプリレンダリング中はキャンバスを生成しない
+    // （静的HTMLにcanvasが混入するとhydration不一致になるため）
+    if (navigator.userAgent === 'ReactSnap') {
+      return;
+    }
     if (canvasRef.current && !p5InstanceRef.current) {
       p5InstanceRef.current = new p5(sketch, canvasRef.current);
     }

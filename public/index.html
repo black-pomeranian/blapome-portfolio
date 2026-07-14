@@ -1,43 +1,187 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+
+    <!-- Primary Meta -->
+    <title>Black Pomeranian（ブラックポメラニアン）| VJ / DJ / クリエイティブプログラマー - 東京 | リアルタイム映像演出・インタラクティブ開発</title>
     <meta
       name="description"
-      content="black pomeranian's portfolio"
+      content="Black Pomeranian（ブラックポメラニアン）は東京拠点のVJ / DJ / クリエイティブプログラマー。自作VJソフトウェアによる音響解析×リアルタイムレンダリングの映像演出、インスタレーション、Web・ゲーム・AI・VRのインタラクティブ開発を手がける。クラブイベントへのVJ/DJ出演、映像システム・コンテンツ開発の実績多数。"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="author" content="Black Pomeranian" />
+    <link rel="canonical" href="https://black-pomeranian.com/" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Black Pomeranian | ﾌﾞﾗｯｸﾎﾟﾒﾗﾆｱﾝ</title>
+    <!-- OGP -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Black Pomeranian Portfolio" />
+    <meta property="og:title" content="Black Pomeranian | VJ / DJ / クリエイティブプログラマー（東京）" />
+    <meta property="og:description" content="音響解析×リアルタイムレンダリングによるVJパフォーマンス、インスタレーション、インタラクティブ開発。出演・制作実績はこちら。" />
+    <meta property="og:url" content="https://black-pomeranian.com/" />
+    <meta property="og:image" content="https://black-pomeranian.com/images/profile.png" />
+    <meta property="og:image:alt" content="Black Pomeranian（ブラックポメラニアン）のプロフィール写真" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Black Pomeranian | VJ / DJ / クリエイティブプログラマー（東京）" />
+    <meta name="twitter:description" content="音響解析×リアルタイムレンダリングによるVJ、インスタレーション、インタラクティブ開発。" />
+    <meta name="twitter:image" content="https://black-pomeranian.com/images/profile.png" />
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- canonical / og:url をページごとの正しいURLに更新する。
+         react-snap のプリレンダリング時に実行されるため、各ページの静的HTMLに正しいURLが保存される -->
+    <script>
+      (function () {
+        var url = 'https://black-pomeranian.com' + window.location.pathname;
+        var canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute('href', url);
+        var ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute('content', url);
+      })();
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://black-pomeranian.com/#person",
+          "name": "Black Pomeranian",
+          "alternateName": "ブラックポメラニアン",
+          "url": "https://black-pomeranian.com/",
+          "image": "https://black-pomeranian.com/images/profile.png",
+          "email": "mailto:info@black-pomeranian.com",
+          "jobTitle": ["VJ", "DJ", "Creative Programmer"],
+          "description": "東京を拠点とするVJ / DJ / クリエイティブプログラマー。認知科学の研究、プログラミングの経験、クラブカルチャーからの影響を基盤に活動。自作VJソフトウェアを用いた音響解析×リアルタイムレンダリングの映像演出を行い、インスタレーション、ゲーム、Web、AI、VR、映像などを横断的に制作する。",
+          "homeLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Tokyo",
+              "addressCountry": "JP"
+            }
+          },
+          "sameAs": [
+            "https://www.instagram.com/_black_pomeranian/",
+            "https://github.com/black-pomeranian",
+            "https://open.spotify.com/show/06zKHRmTybDUiNSByMieQ2"
+          ],
+          "knowsAbout": [
+            "VJ (Visual Jockey)",
+            "Real-time Rendering",
+            "Audio-reactive Visuals",
+            "Audio Analysis / Sound Visualization",
+            "Creative Coding",
+            "Interactive Installation",
+            "TouchDesigner",
+            "Unity / WebGL Game Development",
+            "Machine Learning / Neural Networks / Object Detection",
+            "Generative AI / Stable Diffusion / LoRA",
+            "Web Development (React, p5.js, Three.js)",
+            "Chrome Extension Development",
+            "MIDI / OSC Integration",
+            "3DCG / Low-poly Modeling",
+            "Motion Graphics / Reel Video Production",
+            "Graphic Design / Logo Design",
+            "Techno / Bass Music / Leftfield / House DJing",
+            "Cognitive Science"
+          ],
+          "hasOccupation": [
+            {
+              "@type": "Occupation",
+              "name": "VJ / Visual Artist",
+              "occupationLocation": { "@type": "City", "name": "Tokyo" },
+              "skills": "自作VJソフトウェアによるリアルタイム音響解析・映像生成、MIDIコントローラ/OSC連携、クラブ・ライブハウス・シアターでの映像演出"
+            },
+            {
+              "@type": "Occupation",
+              "name": "Creative Programmer",
+              "occupationLocation": { "@type": "City", "name": "Tokyo" },
+              "skills": "インタラクティブインスタレーション、Web開発（React/p5.js/Three.js）、Unityゲーム開発、TouchDesigner、AI・機械学習実装、Chrome拡張開発"
+            },
+            {
+              "@type": "Occupation",
+              "name": "DJ",
+              "occupationLocation": { "@type": "City", "name": "Tokyo" },
+              "skills": "テクノ、ベースミュージック、レフトフィールド、ハウスを横断するジャンルレスなDJミックス"
+            }
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://black-pomeranian.com/#service",
+          "name": "Black Pomeranian — VJ/DJ出演・映像演出・インタラクティブ開発",
+          "url": "https://black-pomeranian.com/",
+          "founder": { "@id": "https://black-pomeranian.com/#person" },
+          "areaServed": { "@type": "Country", "name": "Japan" },
+          "availableLanguage": ["ja", "en"],
+          "email": "info@black-pomeranian.com",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "提供サービス",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "VJ出演",
+                  "description": "クラブイベント・ライブ・シアター・企業パーティーでのVJパフォーマンス。自作ソフトウェアによる音響解析リアルタイム映像演出。"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "DJ出演",
+                  "description": "テクノ、ベースミュージック、レフトフィールド、ハウスを横断するジャンルレスなDJセット。"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "インタラクティブコンテンツ開発",
+                  "description": "インスタレーション、Webサイト、ゲーム（Unity/WebGL）、AI・機械学習活用システム、VRコンテンツ、Chrome拡張の企画・開発。"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "映像・グラフィック制作",
+                  "description": "SNSリール動画、動画フライヤー、ロゴデザイン、ブランドPOP UPイベント映像などの制作。"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://black-pomeranian.com/#website",
+          "url": "https://black-pomeranian.com/",
+          "name": "Black Pomeranian Portfolio",
+          "inLanguage": ["ja", "en"],
+          "publisher": { "@id": "https://black-pomeranian.com/#person" }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      Black Pomeranian（ブラックポメラニアン）— 東京拠点のVJ / DJ / クリエイティブプログラマー。
+      自作VJソフトによる音響解析×リアルタイム映像演出、インスタレーション・Web・ゲーム・AI開発。
+      お問い合わせ: info@black-pomeranian.com
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

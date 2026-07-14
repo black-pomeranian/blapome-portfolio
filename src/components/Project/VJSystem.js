@@ -3,30 +3,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const VJSystem = () => {
   return (
-    <div className="container">
+    <main className="container">
 
-        <div className='project'>
+        <article className='project'>
         {/* タイトル */}
-        <div className="row mb-4 justify-content-center">
+        <header className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
             <h1 className="project-title text-left">VJ System</h1>
-            <p className="text-left date">2023.6</p>
+            <p className="text-left date"><time dateTime="2023-06">2023.6</time></p>
 
           </div>
-        </div>
+        </header>
 
         {/* 画像 */}
-        <div className="row mb-4 justify-content-center">
+        <section className="row mb-4 justify-content-center" aria-label="作品ギャラリー">
           <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/VJSystem/UI.webp`} alt="VJ System's UI" className="img-fluid small-image d-block mx-auto py-1" />
-            <img src={`${process.env.PUBLIC_URL}/images/VJSystem/params.webp`} alt="Changing VJ Systems's UI" className="img-fluid small-image" />
-            <img src={`${process.env.PUBLIC_URL}/images/VJSystem/playing.png`} alt="Playing the VJ System" className="img-fluid small-image" />
+            <img src={`${process.env.PUBLIC_URL}/images/VJSystem/UI.webp`} alt="自作VJソフトウェアのUI画面。音響解析に反応するボタン・スライダーと映像プレビュー" className="img-fluid small-image d-block mx-auto py-1" />
+            <img src={`${process.env.PUBLIC_URL}/images/VJSystem/params.webp`} alt="MIDIコントローラと連動してパラメータを操作するVJシステムの画面" className="img-fluid small-image" />
+            <img src={`${process.env.PUBLIC_URL}/images/VJSystem/playing.png`} alt="クラブで自作VJシステムを使いリアルタイム映像演出を行うパフォーマンスの様子" className="img-fluid small-image" />
           </div>
-        </div>
+        </section>
 
         {/* 説明 */}
-        <div className="row justify-content-center">
-          <div className="descliption-jp col-12 col-md-8">
+        <section className="row justify-content-center" aria-label="作品説明">
+          <div className="descliption-jp col-12 col-md-8" lang="ja">
             <p>
               クラブにてVJを実施するために開発したシステム。<br></br>
               ボタンやスライダーの操作に対応して、UIの装飾も変化する。<br></br>
@@ -37,7 +37,7 @@ const VJSystem = () => {
               音声の解析結果に応じて映像に変化が生じる。<br></br>
             </p>
           </div>
-          <div className="descliption-en col-12 col-md-8">
+          <div className="descliption-en col-12 col-md-8" lang="en">
             <p>
               A system developed for VJing in a club.<br></br>
               The UI decorations change in response to the operation of buttons and sliders.<br></br>
@@ -48,15 +48,15 @@ const VJSystem = () => {
               The visuals change according to the analysis results of the audio.<br></br>
             </p>
           </div>
-          <div className="credit col-12 col-md-8 py-2">
+          <footer className="credit col-12 col-md-8 py-2">
             <p>
               Credit<br></br>
               All：Black Pomeranian<br></br>
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
+          </footer>
+        </section>
+      </article>
+    </main>
   )
 }
 

@@ -1,99 +1,99 @@
 [
     {
         "src": "/images/DOM-VJ/KV.jpg",
-        "alt": "DOM-VJ KV",
+        "alt": "音楽に合わせてWebサイトのDOM要素が踊るChrome拡張「DOM-VJ」のキービジュアル",
         "title": "DOM-VJ",
         "url": "/Project/DOM-VJ"
     },
     {
         "src": "/images/DogDetection/DogDetection.png",
-        "alt": "Dog Detection",
+        "alt": "ニューラルネットワークとTouchDesignerによるリアルタイム犬検出システム「Dog Detection」の検出結果画面",
         "title": "Dog Detection",
         "url": "/Project/DogDetection"
     },
 
     {
         "src": "/images/Portfolio2/KV.png",
-        "alt": "Webサイトサイトの更新",
+        "alt": "p5.js製の動く黒い影を背景にしたポートフォリオWebサイト更新のキービジュアル",
         "title": "Webサイトの更新",
         "url": "/Project/Portfolio2"
     },
     {
         "src": "/images/r108/KV.png",
-        "alt": "r108フライヤー",
+        "alt": "中目黒HVENのイベント「r108×A.O.R.B」向けに制作した90年代クラブフライヤー風の動画フライヤー",
         "title": "r108×A.O.R.B フライヤー",
         "url": "/Project/r108"
     },
     {
         "src": "/images/Sticker/KV.png",
-        "alt": "Sticker",
+        "alt": "名刺代わりにも使えるBlack Pomeranianオリジナルステッカーのデザイン",
         "title": "ブラックポメラニアン ステッカー",
         "url": "/Project/Sticker"
     },
     {
         "src": "/images/GOODNEWS/KV.png",
-        "alt": "GOODNEWS",
+        "alt": "静岡のパーティー「GOODNEWS」告知用リール動画のキービジュアル",
         "title": "GOODNEWS リール動画",
         "url": "/Project/GoodNews"
     },
     {
         "src": "/images/FFF_Reel/KV.png",
-        "alt": "FFF Reel",
+        "alt": "楽曲解析でエフェクトが変化する5 FEET FARMビジュアライザーリール動画のキービジュアル",
         "title": "5 FEET FARM リール動画",
         "url": "/Project/FFF_Reel"
     },
     {
         "src": "/images/podcast/KV.png",
-        "alt": "Podcast",
+        "alt": "ポッドキャスト番組「ブラックポメラニアンの犬小屋」のカバーアート",
         "title": "ブラックポメラニアンの犬小屋",
         "url": "/Project/Podcast"
     },
     {
         "src": "/images/DreamFootball/KV.png",
-        "alt": "DreamFootball",
+        "alt": "PS1風ローポリグラフィックスのUnity製PKサッカーゲーム「BENE Dream Football」のキービジュアル",
         "title": "DreamFootball",
         "url": "/Project/DreamFootball"
     },
     {
         "src": "/images/FFF/FFF.png",
-        "alt": "FFF",
+        "alt": "檻をモチーフにクロム質感を付与したクリエイティブコレクティブ「5 FEET FARM」のロゴデザイン",
         "title": "5 FEET FARM",
         "url": "/Project/FFF"
     },
     {
         "src": "/images/GenFC/GenFC1.webp",
-        "alt": "GenFC",
+        "alt": "ジェネラティブな手続きで柄が変化するサッカーユニフォーム「GenFC」",
         "title": "GenFC",
         "url": "/Project/GenFC"
     },
     {
         "src": "/images/EN/EN_main.png",
-        "alt": "ENのメインビジュアル",
+        "alt": "自主開催DJパーティ「EN」の円の連なりを象ったメインビジュアル",
         "title": "EN",
         "url": "/Project/EN"
     },
 
     {
         "src": "/images/AVBattle/playing.webp",
-        "alt": "Audio Visual Battle",
+        "alt": "音と映像がOSC連携で対戦するライブシステム「Audio Visual Battle」のパフォーマンス風景",
         "title": "Audio Visual Battle",
         "url": "/Project/AudioVisualBattleSystem"
     },
     {
         "src": "/images/LieofMemories/logo.jpg",
-        "alt": "Lie of Memories",
+        "alt": "Stable DiffusionとLoRAで生成した画像を用いた対戦型カードゲーム「Lie of Memories」のロゴ",
         "title": "Lie of Memories",
         "url": "/Project/LieofMemories"
     },
     {
         "src": "/images/VJSystem/UI.webp",
-        "alt": "VJ System",
+        "alt": "音響解析リアルタイムレンダリングを行う自作VJソフトウェアのUI画面",
         "title": "VJ System",
         "url": "/Project/VJSystem"
     },
     {
         "src": "/images/Portfolio/site.png",
-        "alt": "Webサイト",
+        "alt": "Black PomeranianポートフォリオWebサイト初期バージョンのスクリーンショット",
         "title": "Webサイト",
         "url": "/Project/Portfolio"
     }

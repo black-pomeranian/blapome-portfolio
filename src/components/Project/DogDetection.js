@@ -15,54 +15,54 @@ const DogDetection = () => {
   ];
 
   return (
-    <div className="container">
-      <div className='project'>
+    <main className="container">
+      <article className='project'>
         {/* タイトル */}
-        <div className="row mb-4 justify-content-center">
+        <header className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
             <h1 className="project-title text-left">Dog Detection</h1>
-            <p className="text-left date">2026.03</p>
+            <p className="text-left date"><time dateTime="2026-03">2026.03</time></p>
           </div>
-        </div>
+        </header>
 
 
 
         {/* ギャラリー（3列） */}
-        <div className="row mb-4 justify-content-center">
+        <section className="row mb-4 justify-content-center" aria-label="作品ギャラリー">
           <div className="col-12 col-md-10">
             <div className="row">
               {imgs.map(name => (
                 <div key={name} className="col-4 mb-3 text-center">
-                  <img src={`${process.env.PUBLIC_URL}/images/DogDetection/${name}`} alt={name} className="img-fluid d-block mx-auto" />
+                  <img src={`${process.env.PUBLIC_URL}/images/DogDetection/${name}`} alt="ニューラルネットワークによる犬検出をTouchDesignerでリアルタイム可視化した画面" className="img-fluid d-block mx-auto" />
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
 
         {/* 説明 */}
-        <div className="row justify-content-center">
-          <div className="descliption-jp col-12 col-md-8">
+        <section className="row justify-content-center" aria-label="作品説明">
+          <div className="descliption-jp col-12 col-md-8" lang="ja">
             <p>
               犬のデータセットを用いて、ニューラルネットワークを構築。<br></br>
               これをTouchDesignerでリアルタイムに動かし、検出の可視化やアノテーションの実験を行った。
             </p>
           </div>
-          <div className="descliption-en col-12 col-md-8">
+          <div className="descliption-en col-12 col-md-8" lang="en">
             <p>
               Using a dog dataset, I built a neural network. <br></br>
               I ran this in real-time with TouchDesigner, experimenting with visualization of detection and annotation.
             </p>
           </div>
-          <div className="credit col-12 col-md-8 py-2">
+          <footer className="credit col-12 col-md-8 py-2">
             <p>
               Credit<br></br>
               All: Black Pomeranian
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
+          </footer>
+        </section>
+      </article>
+    </main>
   )
 }
 

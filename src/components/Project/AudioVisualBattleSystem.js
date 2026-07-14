@@ -3,28 +3,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AudioVisualBattleSystem = () => {
   return (
-    <div className="container">
+    <main className="container">
 
-        <div className='project'>
+        <article className='project'>
         {/* タイトル */}
-        <div className="row mb-4 justify-content-center">
+        <header className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
             <h1 className="project-title text-left">Audio Visual Battle</h1>
-            <p className="text-left date">2024.2</p>
+            <p className="text-left date"><time dateTime="2024-02">2024.2</time></p>
           </div>
-        </div>
+        </header>
 
         {/* 画像 */}
-        <div className="row mb-4 justify-content-center">
+        <section className="row mb-4 justify-content-center" aria-label="作品ギャラリー">
           <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/AVBattle/playing.webp`} alt="playing the battle" className="img-fluid py-1" />
-            <div class="ratio ratio-16x9"><iframe width='100%' src="https://www.youtube.com/embed/gSeWsXbDG0A?si=u5RboPsXIFQwh89R" title="Playing Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-            <img src={`${process.env.PUBLIC_URL}/images/AVBattle/System.jpg`} alt="system" className="img-fluid" />
+            <img src={`${process.env.PUBLIC_URL}/images/AVBattle/playing.webp`} alt="Audio Visual Battle Systemを使い、音と映像が対戦するライブパフォーマンスの様子" className="img-fluid py-1" />
+            <div className="ratio ratio-16x9"><iframe width='100%' src="https://www.youtube.com/embed/gSeWsXbDG0A?si=u5RboPsXIFQwh89R" title="Audio Visual Battle System 実演動画（YouTube）" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
+            <img src={`${process.env.PUBLIC_URL}/images/AVBattle/System.jpg`} alt="OSC連携で音と映像を1つのシーケンサーとして機能させるAudio Visual Battleのシステム構成図" className="img-fluid" />
           </div>
-        </div>
+        </section>
         {/* 説明 */}
-        <div className="row justify-content-center">
-          <div className="descliption-jp col-12 col-md-8">
+        <section className="row justify-content-center" aria-label="作品説明">
+          <div className="descliption-jp col-12 col-md-8" lang="ja">
             <p>
               Audio Visualライブ用に設計されたシステム。<br></br>
               AudioとVisual、それぞれに攻撃と防御、回復のコマンドが割り当てられている。<br></br>
@@ -34,7 +34,7 @@ const AudioVisualBattleSystem = () => {
               一方このシステムでは、AudioとVisualが競争を行うことで、1つのアウトプットを創る可能性を提示する。<br></br>
             </p>
           </div>
-          <div className="descliption-en col-12 col-md-8">
+          <div className="descliption-en col-12 col-md-8" lang="en">
             <p>
               System designed for Audio Visual live performance.<br></br>
               Audio and Visual are assigned attack, defense, and recovery commands, respectively.<br></br>
@@ -44,16 +44,16 @@ const AudioVisualBattleSystem = () => {
               This system, on the other hand, presents the possibility of creating a single output by having Audio and Visual compete with each other.<br></br>
             </p>
           </div>
-          <div className="credit col-12 col-md-8 py-2">
+          <footer className="credit col-12 col-md-8 py-2">
             <p>
               Credit<br></br>
               映像：Black Pomeranian<br></br>
               音楽：Akinori Maeda<br></br>
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
+          </footer>
+        </section>
+      </article>
+    </main>
   )
 }
 

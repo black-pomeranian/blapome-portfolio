@@ -3,30 +3,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const LieofMemories = () => {
   return (
-    <div className="container">
+    <main className="container">
 
-        <div className='project'>
+        <article className='project'>
         {/* タイトル */}
-        <div className="row mb-4 justify-content-center">
+        <header className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
             <h1 className="project-title text-left">Lie of Memories</h1>
-            <p className="text-left date">2023.12</p>
+            <p className="text-left date"><time dateTime="2023-12">2023.12</time></p>
           </div>
-        </div>
+        </header>
 
         {/* 画像 */}
-        <div className="row mb-4 justify-content-center">
+        <section className="row mb-4 justify-content-center" aria-label="作品ギャラリー">
           <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/LieofMemories/logo.jpg`} alt="Lie of Memoriesのロゴ画像" className="img-fluid py-1" />
-            <img src={`${process.env.PUBLIC_URL}/images/LieofMemories/card.jpg`} alt="Lie of Memoriesのカードの画像" className="img-fluid py-1" />
-            <img src={`${process.env.PUBLIC_URL}/images/LieofMemories/hand.jpg`} alt="Lie of Memoriesの手札の画像" className="img-fluid py-1" />
+            <img src={`${process.env.PUBLIC_URL}/images/LieofMemories/logo.jpg`} alt="生成AIを用いた対戦型トレーディングカードゲーム「Lie of Memories」のロゴ" className="img-fluid py-1" />
+            <img src={`${process.env.PUBLIC_URL}/images/LieofMemories/card.jpg`} alt="Stable DiffusionとLoRAで生成した「嘘の記憶」が描かれたトレーディングカード" className="img-fluid py-1" />
+            <img src={`${process.env.PUBLIC_URL}/images/LieofMemories/hand.jpg`} alt="Lie of Memoriesのカードを手札として持ちプレイしている様子" className="img-fluid py-1" />
 
           </div>
-        </div>
+        </section>
 
         {/* 説明 */}
-        <div className="row justify-content-center">
-          <div className="descliption-jp col-12 col-md-8 py-2">
+        <section className="row justify-content-center" aria-label="作品説明">
+          <div className="descliption-jp col-12 col-md-8 py-2" lang="ja">
             <p>
               嘘の記憶をテーマにした対戦型トレーディングカードゲーム。<br></br>
               存在し得ない状況に置かれた友人（嘘の記憶）が描かれたカードを用いて対戦を行う。<br></br>
@@ -35,7 +35,7 @@ const LieofMemories = () => {
               全48種類。2023年12月23、みかわや｜コトバコにて販売、プレイ。<br></br>
             </p>
           </div>
-          <div className="descliption-en col-12 col-md-8 py-2">
+          <div className="descliption-en col-12 col-md-8 py-2" lang="en">
             <p>
             A competitive trading card game based on the theme of false memories.<br></br>
               Players compete against each other using cards depicting friends ( Lie of Memories ) who have been placed in situations that could never exist.<br></br>
@@ -45,17 +45,17 @@ const LieofMemories = () => {
             </p>
           </div>
 
-          <div className="credit col-12 col-md-8 py-2">
+          <footer className="credit col-12 col-md-8 py-2">
             <p>
               Credit<br></br>
               企画、プログラム：Black Pomeranian<br></br>
               デザイン、写真等：岩谷虎之介<br></br>
             </p>
-          </div>
+          </footer>
 
-        </div>
-      </div>
-    </div>
+        </section>
+      </article>
+    </main>
   )
 }
 

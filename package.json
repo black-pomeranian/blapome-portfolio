@@ -20,8 +20,38 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/about",
+      "/project",
+      "/performance",
+      "/Project/DOM-VJ",
+      "/Project/Portfolio2",
+      "/Project/r108",
+      "/Project/Sticker",
+      "/Project/GoodNews",
+      "/Project/FFF_Reel",
+      "/Project/DreamFootball",
+      "/Project/FFF",
+      "/Project/Podcast",
+      "/Project/GenFC",
+      "/Project/EN",
+      "/Project/AudioVisualBattleSystem",
+      "/Project/LieofMemories",
+      "/Project/VJSystem",
+      "/Project/Portfolio"
+    ],
+    "skipThirdPartyRequests": true,
+    "crawl": false,
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +75,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
+    "react-snap": "^1.23.0",
     "tailwindcss": "^3.4.17"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
