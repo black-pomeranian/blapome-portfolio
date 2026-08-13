@@ -44,10 +44,14 @@
       "/Project/AudioVisualBattleSystem",
       "/Project/LieofMemories",
       "/Project/VJSystem",
-      "/Project/Portfolio"
+      "/Project/Portfolio",
+      "/Project/DogDetection",
+      "/Project/Spanditur",
+      "/Project/AlterEgo"
     ],
     "skipThirdPartyRequests": true,
     "crawl": false,
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
     "minifyHtml": {
       "collapseWhitespace": false,
       "removeComments": false
