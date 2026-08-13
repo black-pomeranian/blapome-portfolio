@@ -1,5 +1,11 @@
 [
     {
+        "src": "/images/Spanditur/spanditur_1.png",
+        "alt": "Spanditur",
+        "title": "Spanditur",
+        "url": "/Project/Spanditur"
+    },
+    {
         "src": "/images/DOM-VJ/KV.jpg",
         "alt": "音楽に合わせてWebサイトのDOM要素が踊るChrome拡張「DOM-VJ」のキービジュアル",
         "title": "DOM-VJ",
