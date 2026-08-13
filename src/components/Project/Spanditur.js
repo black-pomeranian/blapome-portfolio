@@ -18,13 +18,13 @@ const Spanditur = () => {
         {/* 画像 */}
         <div className="row mb-4 justify-content-center">
           <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/Spanditur/spanditur_1.png`} alt="spanditur_1" className="img-fluid small-image d-block mx-auto py-1 " />
+            <img src={`${process.env.PUBLIC_URL}/images/spanditur/spanditur_1.png`} alt="spanditur_1" className="img-fluid small-image d-block mx-auto py-1 " />
           </div>
           <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/Spanditur/spanditur_2.png`} alt="spanditur_2" className="img-fluid small-image d-block mx-auto py-1 " />
+            <img src={`${process.env.PUBLIC_URL}/images/spanditur/spanditur_2.png`} alt="spanditur_2" className="img-fluid small-image d-block mx-auto py-1 " />
           </div>
           <div className="col-12 col-md-8">
-            <img src={`${process.env.PUBLIC_URL}/images/Spanditur/spanditur_3.png`} alt="spanditur_3" className="img-fluid small-image d-block mx-auto py-1" />
+            <img src={`${process.env.PUBLIC_URL}/images/spanditur/spanditur_3.png`} alt="spanditur_3" className="img-fluid small-image d-block mx-auto py-1" />
           </div>
         </div>
 
