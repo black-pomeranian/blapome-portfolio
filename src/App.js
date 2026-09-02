@@ -28,6 +28,7 @@ import DOMVJ from "./components/Project/DOM-VJ";
 import DogDetection from "./components/Project/DogDetection";
 import Spanditur from "./components/Project/Spanditur";
 import AlterEgo from "./components/Project/AlterEgo";
+import VJSystemv2 from "./components/Project/VJSystemv2";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
           <Route path="/Project/DogDetection" element={<><Header /><DogDetection /></>} />
           <Route path="/Project/Spanditur" element={<><Header /><Spanditur /></>} />
           <Route path="/Project/AlterEgo" element={<><Header /><AlterEgo /></>} />
+          <Route path="/Project/VJSystemv2" element={<><Header /><VJSystemv2 /></>} />
           <Route path="/Project/DreamFootball" element={<><Header /><DreamFootball /></>} />
           <Route path="/Project/DOM-VJ" element={<><Header /><DOMVJ /></>} />
           <Route path="/Project/DreamFootball/game" element={<NoHeaderLayout><DreamFootballGame /></NoHeaderLayout>} />

@@ -9,7 +9,9 @@
       "Bash(magick --version)",
       "Bash(python -c \"from PIL import Image; print\\(''Pillow OK''\\)\")",
       "Bash(python:*)",
-      "Bash(npm start:*)"
+      "Bash(npm start:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(identify -format \"frames: %n\\\\n\" \"C:/Users/ryoro/Work/00_every/blapome-portfolio/public/images/VJSystemv2/vjSystem.gif\")"
     ]
   }
 }

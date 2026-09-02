@@ -1,4 +1,10 @@
 [
+        {
+        "src": "/images/VJSystemv2/vjSystem.gif",
+        "alt": "音響解析リアルタイムレンダリングを行う自作VJソフトウェアv.2のUI画面",
+        "title": "VJ System v.2",
+        "url": "/Project/VJSystemv2"
+    },
     {
         "src": "/images/ALTerEGO/front.png",
         "alt": "Kommune 「ALTerEGO」ジャケットのデザイン",
@@ -43,12 +49,6 @@
         "url": "/Project/Sticker"
     },
     {
-        "src": "/images/GOODNEWS/KV.png",
-        "alt": "静岡のパーティー「GOODNEWS」告知用リール動画のキービジュアル",
-        "title": "GOODNEWS リール動画",
-        "url": "/Project/GoodNews"
-    },
-    {
         "src": "/images/FFF_Reel/KV.png",
         "alt": "楽曲解析でエフェクトが変化する5 FEET FARMビジュアライザーリール動画のキービジュアル",
         "title": "5 FEET FARM リール動画",
@@ -85,12 +85,6 @@
         "url": "/Project/EN"
     },
 
-    {
-        "src": "/images/AVBattle/playing.webp",
-        "alt": "音と映像がOSC連携で対戦するライブシステム「Audio Visual Battle」のパフォーマンス風景",
-        "title": "Audio Visual Battle",
-        "url": "/Project/AudioVisualBattleSystem"
-    },
     {
         "src": "/images/LieofMemories/logo.jpg",
         "alt": "Stable DiffusionとLoRAで生成した画像を用いた対戦型カードゲーム「Lie of Memories」のロゴ",
