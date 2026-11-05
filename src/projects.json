@@ -1,5 +1,11 @@
 [
-        {
+    {
+        "src": "/images/GenerativeClock/KV.jpg",
+        "alt": "ジェネラティブなコードアートを背景に時刻・気温・天気を表示するデジタル時計「Generative Clock」",
+        "title": "Generative Clock",
+        "url": "/Project/GenerativeClock"
+    },
+    {
         "src": "/images/VJSystemv2/vjSystem.gif",
         "alt": "音響解析リアルタイムレンダリングを行う自作VJソフトウェアv.2のUI画面",
         "title": "VJ System v.2",

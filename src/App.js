@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import NoHeaderLayout from "./components/NoHeaderLayout"; // 新しいレイアウトコンポーネントをインポート
@@ -29,12 +29,21 @@ import DogDetection from "./components/Project/DogDetection";
 import Spanditur from "./components/Project/Spanditur";
 import AlterEgo from "./components/Project/AlterEgo";
 import VJSystemv2 from "./components/Project/VJSystemv2";
+import GenerativeClock from "./components/Project/GenerativeClock";
+import GenerativeClockPage from "./components/Project/GenerativeClock/ClockPage";
+
+// 時計ページは独自の背景を描くので、サイト共通の背景は止める
+const SiteBackground = () => {
+  const { pathname } = useLocation();
+  if (pathname.startsWith("/Project/GenerativeClock/clock")) return null;
+  return <P5Background />;
+};
 
 function App() {
   return (
     <Router>
       <div className="App ">
-        <P5Background />
+        <SiteBackground />
         <Routes>
           <Route path="/" element={<><Header /><HomePage /></>} />
           <Route path="/about" element={<><Header /><About /></>} />
@@ -54,6 +63,8 @@ function App() {
           <Route path="/Project/VJSystemv2" element={<><Header /><VJSystemv2 /></>} />
           <Route path="/Project/DreamFootball" element={<><Header /><DreamFootball /></>} />
           <Route path="/Project/DOM-VJ" element={<><Header /><DOMVJ /></>} />
+          <Route path="/Project/GenerativeClock" element={<><Header /><GenerativeClock /></>} />
+          <Route path="/Project/GenerativeClock/clock" element={<NoHeaderLayout><GenerativeClockPage /></NoHeaderLayout>} />
           <Route path="/Project/DreamFootball/game" element={<NoHeaderLayout><DreamFootballGame /></NoHeaderLayout>} />
           <Route path="/Project/FFF" element={<><Header /><FFF /></>}  />
           <Route path="/Project/Podcast" element={<><Header /><Podcast /></>}  />
@@ -68,4 +79,4 @@ function App() {
     </Router>
   );
 }
-export default App;
+export default App;
