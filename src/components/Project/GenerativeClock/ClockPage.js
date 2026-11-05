@@ -50,10 +50,13 @@ const ClockPage = () => {
 
   // ページ全体（ヘッダー・サイト共通背景なし）用に body を固定
   useEffect(() => {
+    // サイト共通のノイズ（body::before）もこのページでは外す
     const prev = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('gclock-page');
     return () => {
       document.body.style.overflow = prev;
+      document.body.classList.remove('gclock-page');
     };
   }, []);
 
