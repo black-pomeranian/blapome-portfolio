@@ -33,7 +33,27 @@ function Projects() {
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    // ホバーできない端末（スマホ）では、画面中央に来たカードだけ色を戻す
+    let centerObserver;
+    if (window.matchMedia && window.matchMedia('(hover: none)').matches) {
+      centerObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const card = entry.target.querySelector('.project-card');
+            if (card) card.classList.toggle('is-active', entry.isIntersecting);
+          });
+        },
+        { rootMargin: '-45% 0px -45% 0px' }
+      );
+      itemRefs.current.forEach((el) => {
+        if (el) centerObserver.observe(el);
+      });
+    }
+
+    return () => {
+      observer.disconnect();
+      if (centerObserver) centerObserver.disconnect();
+    };
   }, [projects.length]);
 
   return (
