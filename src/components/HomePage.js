@@ -2,10 +2,12 @@ import React from 'react';
 
 const HomePage = () => {
   return (
-    <main className="fixed inset-0 z-0 bg-transparent overflow-hidden">
-      <div className="w-full h-full relative">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-transparent">
-          <div className="text-center text-white bg-transparent">
+    // transform / z-index で重なりコンテキストを作らないよう flex で中央寄せ
+    // （タイトルの mix-blend-mode を背景キャンバスに効かせるため）
+    <main className="absolute inset-0 overflow-hidden flex items-center justify-center">
+      <div>
+        <div>
+          <div className="text-center">
             {/* h1のブラウザ既定スタイル（margin, font-weight）を打ち消し、従来のspanと同一の見た目を維持 */}
             <h1 className="home-title-text" style={{ margin: 0, fontWeight: 400 }}>
               Black Pomeranian
@@ -16,10 +18,11 @@ const HomePage = () => {
               自作VJソフトウェアによる音響解析×リアルタイムレンダリングの映像演出、
               インスタレーション・Web・ゲーム・AI・VRのインタラクティブ開発を行う。
             </p>
-            <nav className="mt-12 flex justify-center gap-6 bg-transparent home-links" aria-label="メインコンテンツへのリンク">
-              <a href="/about" className="text-lg sm:text-xl text-white hover:underline">About</a>
-              <a href="/project" className="text-lg sm:text-xl text-white hover:underline">Project</a>
-              <a href="/performance" className="text-lg sm:text-xl text-white hover:underline">Performance</a>
+            <p className="home-sub" aria-hidden="true">Programmer / VJ / DJ — Tokyo</p>
+            <nav className="home-links" aria-label="メインコンテンツへのリンク">
+              <a href="/about"><span aria-hidden="true">01</span>About</a>
+              <a href="/project"><span aria-hidden="true">02</span>Project</a>
+              <a href="/performance"><span aria-hidden="true">03</span>Performance</a>
             </nav>
           </div>
         </div>

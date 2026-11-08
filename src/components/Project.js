@@ -42,7 +42,7 @@ function Projects() {
     <h1 className="visually-hidden">Projects — Black Pomeranian の制作実績（VJシステム・インスタレーション・Web・ゲーム・AI・映像）</h1>
     {/* gx-0 に変更し、カード間の左右のパディングを削除 */}
     {/* gy-1 (上下のガター) は残しておきます */}
-    <Row as="ul" className="gx-4 gy-1 justify-content-center" style={{ listStyle: 'none', paddingLeft: 0, marginBottom: 0 }}>
+    <Row as="ul" className="gx-4 gy-4 justify-content-center" style={{ listStyle: 'none', paddingLeft: 0, marginBottom: 0 }}>
       {projects.map((image, index) => (
         // sm={10} (スマホで幅10/12) に設定し、カードを小さくして、Rowの justify-content-center で中央寄せにする
         // md={5} はPCなどの表示を維持
@@ -55,13 +55,16 @@ function Projects() {
           className="mb-4 fade-item"
           ref={(el) => (itemRefs.current[index] = el)}
         >
-          <Link to={image.url} aria-label={`プロジェクト「${image.title}」の詳細を見る`}>
+          <Link to={image.url} className="project-card" aria-label={`プロジェクト「${image.title}」の詳細を見る`}>
             <div className="image-overlay-container card-aspect-ratio">
               <img src={image.src} alt={image.alt} className="img-fluid img-rounded" loading="lazy" />
               <div className="image-overlay" aria-hidden="true"></div>
             </div>
+            <div className="project-meta">
+              <span className="project-index" aria-hidden="true">{String(projects.length - index).padStart(2, '0')}</span>
+              <p className="project-title">{image.title}</p>
+            </div>
           </Link>
-          <p className="project-title">{image.title}</p>
 
           </Col>
         ))}

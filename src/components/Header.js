@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  // ホームでは背景の白黒に対して文字を反転（difference）させる
+  const isHome = useLocation().pathname === "/";
 
   return (
-    <header className="header">
+    <header className={`header${isHome ? " header--home" : ""}`}>
       <div className="header-area">
         <Link to="/" className="title" aria-label="Black Pomeranian（ブラックポメラニアン）ホームへ戻る">
-          {/* 装飾文字（Mathematical Fraktur）はスクリーンリーダー・検索エンジンが読めないため aria-hidden とし、名前は Link の aria-label で提供する */}
-          <h3 className="text-light header-title" aria-hidden="true"><span style={{ whiteSpace: 'nowrap' }}>𝔅𝔩𝔞𝔠𝔨 𝔓𝔬𝔪𝔢𝔯𝔞𝔫𝔦𝔞𝔫</span></h3>
+          {/* ブラックレターはWebフォント（UnifrakturMaguntia）で表示。名前は Link の aria-label で提供する */}
+          <h3 className="header-title" aria-hidden="true"><span style={{ whiteSpace: 'nowrap' }}>Black Pomeranian</span></h3>
         </Link>
         <div className="separator-line" aria-hidden="true"></div>
         <button
@@ -32,13 +34,13 @@ const Header = () => {
       <nav id="global-nav" className={`nav ${isNavExpanded ? "expanded" : ""}`} aria-label="サイト内ナビゲーション">
         <ul>
           <li>
-            <Link to="/about" className="header-link" onClick={() => setIsNavExpanded(false)}>About</Link>
+            <NavLink to="/about" className="header-link" onClick={() => setIsNavExpanded(false)}><span className="nav-index" aria-hidden="true">01</span>About</NavLink>
           </li>
           <li>
-            <Link to="/project" className="header-link" onClick={() => setIsNavExpanded(false)}>Project</Link> 
+            <NavLink to="/project" className="header-link" onClick={() => setIsNavExpanded(false)}><span className="nav-index" aria-hidden="true">02</span>Project</NavLink> 
           </li>
           <li>
-            <Link to="/performance" className="header-link" onClick={() => setIsNavExpanded(false)}>Performance</Link>
+            <NavLink to="/performance" className="header-link" onClick={() => setIsNavExpanded(false)}><span className="nav-index" aria-hidden="true">03</span>Performance</NavLink>
           </li>
         </ul>
       </nav>
