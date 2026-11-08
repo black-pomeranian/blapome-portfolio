@@ -381,29 +381,19 @@ nav ul li a,
 
 .home-links a {
   display: inline-block;
-  padding: 10px 16px;
+  padding: 6px 4px;
   font-family: var(--f-mono);
-  font-size: clamp(14px, 1.2vw, 17px);
-  letter-spacing: 0.02em;
+  font-size: clamp(16px, 1.5vw, 22px);
   text-decoration: none;
   color: var(--paper);
-  background: rgba(8, 8, 8, 0.82);
-  border: 1px solid rgba(242, 242, 238, 0.5);
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-}
-
-.home-links a span {
-  color: var(--acid);
-  margin-right: 8px;
+  background: none;
+  border: none;
+  text-shadow: 0 0 6px rgba(8, 8, 8, 0.9), 0 0 2px rgba(8, 8, 8, 0.9);
+  transition: color 0.2s;
 }
 
 .home-links a:hover {
-  background: var(--acid);
-  border-color: var(--acid);
-  color: var(--ink);
-}
-.home-links a:hover span {
-  color: var(--ink);
+  color: var(--acid);
 }
 
 @media (max-width: 768px) {
@@ -413,8 +403,7 @@ nav ul li a,
     gap: 12px;
   }
   .home-links a {
-    min-width: 200px;
-    text-align: left;
+    text-align: center;
   }
 }
 
