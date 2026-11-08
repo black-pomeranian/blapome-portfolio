@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=UnifrakturMaguntia&family=Ubuntu:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,10 +15,11 @@
   --hair: rgba(242, 242, 238, 0.16);
   --acid: #adff2f;
 
-  --f-black: 'UnifrakturMaguntia', serif;
-  --f-display: 'Inter Tight', 'Zen Kaku Gothic New', sans-serif;
-  --f-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
-  --f-jp: 'Zen Kaku Gothic New', 'Inter Tight', sans-serif;
+  /* 書体は従来どおり Ubuntu（欧文）＋ Zen Kaku Gothic New（和文） */
+  --f-black: 'Ubuntu', 'Zen Kaku Gothic New', sans-serif;
+  --f-display: 'Ubuntu', 'Zen Kaku Gothic New', sans-serif;
+  --f-mono: 'Ubuntu', 'Zen Kaku Gothic New', sans-serif;
+  --f-jp: 'Zen Kaku Gothic New', 'Ubuntu', sans-serif;
 
   /* 旧変数（他所からの参照用に残す） */
   --black-color: #01000000;
@@ -83,8 +84,7 @@ a {
   font-family: var(--f-mono);
   font-size: 11px;
   font-weight: 400;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--paper-dim);
 }
 
@@ -154,7 +154,7 @@ header .title h3,
 .header-title {
   font-family: var(--f-black);
   font-weight: 400;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 1;
   margin: 0 0 0 32px;
   color: var(--paper);
@@ -179,9 +179,8 @@ nav ul li {
 nav ul li a,
 .header-link {
   font-family: var(--f-mono);
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-size: 17px;
+  letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--paper);
   transition: color 0.2s;
@@ -311,7 +310,7 @@ nav ul li a,
   .nav li a .nav-index {
     font-family: var(--f-mono);
     font-size: 12px;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.02em;
     vertical-align: super;
     margin-right: 12px;
   }
@@ -355,12 +354,12 @@ nav ul li a,
    ============================================================ */
 .home-title-text {
   display: inline-block;
-  width: 86vw;
+  width: 80vw;
   white-space: nowrap;
   text-align: center;
   font-family: var(--f-black);
-  font-weight: 400;
-  font-size: clamp(44px, 11vw, 5000px);
+  font-weight: 500;
+  font-size: clamp(25px, 8vw, 5000px);
   line-height: 1;
   color: #fff;
   mix-blend-mode: difference;
@@ -371,8 +370,7 @@ nav ul li a,
   margin-top: 20px;
   font-family: var(--f-mono);
   font-size: clamp(10px, 0.9vw, 13px);
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--paper);
 }
 
@@ -387,9 +385,8 @@ nav ul li a,
   display: inline-block;
   padding: 10px 16px;
   font-family: var(--f-mono);
-  font-size: clamp(11px, 1vw, 14px);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-size: clamp(14px, 1.2vw, 17px);
+  letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--paper);
   background: rgba(8, 8, 8, 0.82);
@@ -562,7 +559,7 @@ nav ul li a,
   transform: scale(1.03);
 }
 .project-card:hover .image-overlay {
-  box-shadow: inset 0 0 0 2px var(--acid);
+  box-shadow: inset 0 0 0 1px var(--hair);
 }
 
 .project-card {
@@ -581,7 +578,7 @@ nav ul li a,
 .project-index {
   font-family: var(--f-mono);
   font-size: 11px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.02em;
   color: var(--paper-faint);
   transition: color 0.2s;
 }
@@ -628,7 +625,7 @@ nav ul li a,
 .project > header h1.project-title,
 h1.project-title {
   font-family: var(--f-display);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(34px, 4.6vw, 68px);
   line-height: 1.02;
   letter-spacing: -0.03em;
@@ -639,7 +636,7 @@ h1.project-title {
 .date {
   font-family: var(--f-mono);
   font-size: 12px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.02em;
   color: var(--acid);
   padding-bottom: 20px;
   border-bottom: 1px solid var(--hair);
@@ -689,7 +686,7 @@ h1.project-title {
 .rubi {
   font-family: var(--f-mono);
   font-size: 11px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.02em;
   color: var(--acid);
 }
 
@@ -730,7 +727,7 @@ h1.project-title {
 
 .perf-year-head h2 {
   font-family: var(--f-display);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(44px, 6vw, 88px);
   line-height: 0.9;
   letter-spacing: -0.04em;
@@ -761,14 +758,14 @@ h1.project-title {
 .perf-date {
   font-family: var(--f-mono);
   font-size: 12px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
   color: var(--paper-dim);
 }
 
 .perf-role {
   font-family: var(--f-mono);
   font-size: 11px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.02em;
   color: var(--acid);
 }
 
@@ -836,29 +833,6 @@ h1.project-title {
 /* ============================================================
    Image integration（画像を背景になじませる）
    ============================================================ */
-/* ビューファインダー風のコーナーマーク */
-.image-overlay::after {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  --c: rgba(242, 242, 238, 0.9);
-  background:
-    linear-gradient(var(--c), var(--c)) top left / 12px 1px no-repeat,
-    linear-gradient(var(--c), var(--c)) top left / 1px 12px no-repeat,
-    linear-gradient(var(--c), var(--c)) top right / 12px 1px no-repeat,
-    linear-gradient(var(--c), var(--c)) top right / 1px 12px no-repeat,
-    linear-gradient(var(--c), var(--c)) bottom left / 12px 1px no-repeat,
-    linear-gradient(var(--c), var(--c)) bottom left / 1px 12px no-repeat,
-    linear-gradient(var(--c), var(--c)) bottom right / 12px 1px no-repeat,
-    linear-gradient(var(--c), var(--c)) bottom right / 1px 12px no-repeat;
-  opacity: 0;
-  transition: opacity 0.3s, inset 0.3s;
-}
-.project-card:hover .image-overlay::after {
-  opacity: 1;
-  --c: var(--acid);
-}
-
 /* 通常時：モノクロ＋背景と同じ縦線スクリーンで、白黒のオプアートと同じ素材感にする。
    ホバー（スマホでは画面中央に来たカード）でスクリーンが抜けて色が戻る */
 .image-overlay::before {
@@ -878,10 +852,6 @@ h1.project-title {
 .project-card:hover .card-aspect-ratio img,
 .project-card.is-active .card-aspect-ratio img {
   filter: none;
-}
-.project-card.is-active .image-overlay::after {
-  opacity: 1;
-  --c: var(--acid);
 }
 .project-card.is-active .project-title,
 .project-card.is-active .project-index {

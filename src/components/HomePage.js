@@ -20,9 +20,9 @@ const HomePage = () => {
             </p>
             <p className="home-sub" aria-hidden="true">Programmer / VJ / DJ — Tokyo</p>
             <nav className="home-links" aria-label="メインコンテンツへのリンク">
-              <a href="/about"><span aria-hidden="true">01</span>About</a>
-              <a href="/project"><span aria-hidden="true">02</span>Project</a>
-              <a href="/performance"><span aria-hidden="true">03</span>Performance</a>
+              <a href="/about">About</a>
+              <a href="/project">Project</a>
+              <a href="/performance">Performance</a>
             </nav>
           </div>
         </div>
