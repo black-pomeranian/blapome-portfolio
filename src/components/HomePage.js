@@ -2,8 +2,6 @@ import React from 'react';
 
 const HomePage = () => {
   return (
-    // transform / z-index で重なりコンテキストを作らないよう flex で中央寄せ
-    // （タイトルの mix-blend-mode を背景キャンバスに効かせるため）
     <main className="absolute inset-0 overflow-hidden flex items-center justify-center">
       <div>
         <div>
@@ -18,7 +16,6 @@ const HomePage = () => {
               自作VJソフトウェアによる音響解析×リアルタイムレンダリングの映像演出、
               インスタレーション・Web・ゲーム・AI・VRのインタラクティブ開発を行う。
             </p>
-            <p className="home-sub" aria-hidden="true">Programmer / VJ / DJ — Tokyo</p>
             <nav className="home-links" aria-label="メインコンテンツへのリンク">
               <a href="/about">About</a>
               <a href="/project">Project</a>

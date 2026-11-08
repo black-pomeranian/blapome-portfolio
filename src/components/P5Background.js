@@ -66,7 +66,7 @@ const sketch = (p) => {
       }
     }
 
-    // 2つの焦点を細い十字線＋座標ラベルで示す（計測器のようなディテール）
+    // 2つの焦点を細い十字線で示す
     drawMarker(virtualMouseX, virtualMouseY);
     drawMarker(targetX, targetY);
   };
@@ -79,11 +79,6 @@ const sketch = (p) => {
     p.line(x + 4, y, x + arm, y);
     p.line(x, y - arm, x, y - 4);
     p.line(x, y + 4, x, y + arm);
-    p.noStroke();
-    p.fill(173, 255, 47);
-    p.textFont('monospace');
-    p.textSize(10);
-    p.text(`${String(Math.round(x)).padStart(4, '0')}.${String(Math.round(y)).padStart(4, '0')}`, x + arm + 6, y - 6);
   };
 
   p.windowResized = () => {
