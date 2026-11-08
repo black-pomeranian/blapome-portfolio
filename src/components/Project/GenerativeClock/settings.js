@@ -33,12 +33,15 @@ export const ELEMENTS = [
 ];
 
 export const DEFAULT_SETTINGS = {
-  background: 'flow',
+  background: 'drift',
   color: '#f8f9fa',
   hour12: false,
   showSeconds: true,
   tempUnit: 'C',
   location: 'auto', // auto = 現在地 / tokyo = 東京固定
+  interact: true, // 背景と時計の連動
+  fps: 20, // 背景の fps（常時表示での電池・発熱対策）
+  keepAwake: true, // Screen Wake Lock で画面を消さない
   elements: {
     time: { visible: true, position: 'center', font: 'spacemono', size: 16 },
     date: { visible: false, position: 'center', font: 'ubuntu', size: 3 },

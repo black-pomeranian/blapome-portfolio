@@ -107,6 +107,29 @@ const SettingsPanel = ({ settings, onChange, onClose }) => {
         </label>
       </section>
 
+      <section>
+        <h3>動き・常時表示</h3>
+        <label className="gclock-row">
+          <input type="checkbox" checked={settings.interact} onChange={(e) => set({ interact: e.target.checked })} />
+          <span>背景と時計を連動させる</span>
+        </label>
+        <label className="gclock-row">
+          <span>背景のfps</span>
+          <select value={settings.fps} onChange={(e) => set({ fps: Number(e.target.value) })}>
+            <option value={15}>15（省電力）</option>
+            <option value={20}>20</option>
+            <option value={30}>30（なめらか）</option>
+          </select>
+        </label>
+        <label className="gclock-row">
+          <input type="checkbox" checked={settings.keepAwake} onChange={(e) => set({ keepAwake: e.target.checked })} />
+          <span>画面を自動で消さない</span>
+        </label>
+        <p className="gclock-note">
+          iPad：Safari の共有ボタン →「ホーム画面に追加」で、アプリのように全画面で開けます。
+        </p>
+      </section>
+
       <section className="gclock-actions">
         <button type="button" onClick={toggleFullscreen}>フルスクリーン</button>
         <button type="button" onClick={() => onChange(DEFAULT_SETTINGS)}>初期設定に戻す</button>

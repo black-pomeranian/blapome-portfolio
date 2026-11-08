@@ -3,6 +3,7 @@ import Background from './Background';
 import SettingsPanel from './SettingsPanel';
 import { ELEMENTS, POSITIONS, fontCss, loadSettings, saveSettings } from './settings';
 import { useWeather } from './weather';
+import { useKeepAwake, useHomeScreenApp } from './device';
 import WeatherIcon from './WeatherIcon';
 import './GenerativeClock.css';
 
@@ -28,11 +29,37 @@ const ClockPage = () => {
   const [uiVisible, setUiVisible] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
   const hideTimer = useRef(null);
+  const layerRef = useRef(null);
   const weather = useWeather(settings.location);
 
+  useKeepAwake(settings.keepAwake);
+  useHomeScreenApp();
+
+  // 背景 → 時計の連動。React の再描画を通さず CSS 変数を直接書き換える
+  // （opacity と transform だけなので GPU 合成で済み、軽い）
+  const lastOut = useRef({ glow: -1, offsetY: -1 });
+  const setOutput = useCallback(({ glow = 0, offsetY = 0 }) => {
+    const el = layerRef.current;
+    if (!el) return;
+    const prev = lastOut.current;
+    if (Math.abs(prev.glow - glow) > 0.01) {
+      el.style.setProperty('--gclock-glow', glow.toFixed(3));
+      prev.glow = glow;
+    }
+    if (Math.abs(prev.offsetY - offsetY) > 0.2) {
+      el.style.setProperty('--gclock-offset', `${offsetY.toFixed(1)}px`);
+      prev.offsetY = offsetY;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!settings.interact) setOutput({ glow: 0, offsetY: 0 });
+  }, [settings.interact, settings.background, setOutput]);
+
   // 背景スケッチに渡すデータ（毎フレーム参照されるので ref で共有）
-  const dataRef = useRef({ now, weather });
-  dataRef.current = { now, weather };
+  const data = { now, weather, interact: settings.interact, setOutput };
+  const dataRef = useRef(data);
+  dataRef.current = data;
 
   useEffect(() => saveSettings(settings), [settings]);
 
@@ -104,9 +131,9 @@ const ClockPage = () => {
       style={{ color: settings.color }}
     >
       <h1 className="visually-hidden">Generative Clock</h1>
-      <Background backgroundId={settings.background} dataRef={dataRef} />
+      <Background backgroundId={settings.background} dataRef={dataRef} fps={settings.fps} />
 
-      <div className="gclock-layer">
+      <div className="gclock-layer" ref={layerRef}>
         {POSITIONS.map((pos) => (
           <div key={pos.id} className={`gclock-zone gclock-zone-${pos.id}`}>
             {ELEMENTS.filter(({ id }) => isShown(id) && settings.elements[id].position === pos.id).map(({ id }) => (

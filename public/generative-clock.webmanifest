@@ -1,0 +1,16 @@
+{
+  "name": "Generative Clock — Black Pomeranian",
+  "short_name": "Clock",
+  "description": "ジェネラティブなコードアートを背景に、時刻・天気・気温を表示するデジタル時計",
+  "lang": "ja",
+  "start_url": "/Project/GenerativeClock/clock",
+  "scope": "/Project/GenerativeClock/clock",
+  "display": "fullscreen",
+  "orientation": "any",
+  "theme_color": "#08080c",
+  "background_color": "#08080c",
+  "icons": [
+    { "src": "/images/GenerativeClock/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/GenerativeClock/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

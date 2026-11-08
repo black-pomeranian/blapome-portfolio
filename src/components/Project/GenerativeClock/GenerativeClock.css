@@ -167,3 +167,19 @@
 body.gclock-page::before {
   display: none;
 }
+
+/* 背景 → 時計の連動（値は背景スケッチが CSS 変数で渡す）。opacity / transform のみで軽量 */
+.gclock-layer {
+  transform: translate3d(0, var(--gclock-offset, 0px), 0);
+  will-change: transform;
+}
+.gclock-text {
+  opacity: calc(0.82 + var(--gclock-glow, 0) * 0.18);
+}
+
+.gclock-note {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(248, 249, 250, 0.65);
+}
