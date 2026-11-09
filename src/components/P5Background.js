@@ -124,7 +124,9 @@ const P5Background = () => {
     <div
       ref={canvasRef}
       className="fixed inset-0 bg-transparent overflow-hidden"
-      style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1 }}
+      // blur は GPU 合成で処理される CSS filter でかける（canvas 側の ctx.filter は重い）。
+      // 画面端がぼけて透けないよう少し拡大しておく
+      style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1, filter: 'blur(12px)', transform: 'scale(1.06)' }}
     />
   );
 };
