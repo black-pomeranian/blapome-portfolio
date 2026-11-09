@@ -115,7 +115,7 @@ a {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(120% 90% at 50% 40%, rgba(8, 8, 8, 0.5) 0%, rgba(8, 8, 8, 0.62) 100%);
+    radial-gradient(120% 90% at 50% 40%, rgba(8, 8, 8, 0.3) 0%, rgba(8, 8, 8, 0.4) 100%);
 }
 
 /* ============================================================

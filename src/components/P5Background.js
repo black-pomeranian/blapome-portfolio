@@ -18,11 +18,11 @@ const sketch = (p) => {
     p.rectMode(p.CENTER);
     const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
     isMobile = p.windowWidth <= 768 || /Mobi|Android|iPhone|iPad|iPod/.test(ua);
-    p.background(isMobile ? 50 : 250);
+    p.background(250);
   };
 
   p.draw = () => {
-    p.background(isMobile ? 50 : 250); // 軽いフェード効果
+    p.background(250); // スマホもPCと同じ明るさ
 
     targetX = p.noise(tx) * p.width;
     targetY = p.noise(ty) * p.height;

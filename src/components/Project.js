@@ -81,7 +81,6 @@ function Projects() {
               <div className="image-overlay" aria-hidden="true"></div>
             </div>
             <div className="project-meta">
-              <span className="project-index" aria-hidden="true">{String(projects.length - index).padStart(2, '0')}</span>
               <p className="project-title">{image.title}</p>
             </div>
           </Link>
