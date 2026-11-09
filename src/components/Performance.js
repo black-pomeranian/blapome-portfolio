@@ -83,6 +83,9 @@ const data = [
 ];
 
 
+// ホームのダイジェストでも使うので出演データを公開する
+export const performanceData = data;
+
 const Performance = () => {
   return (
     <main className="container perf">

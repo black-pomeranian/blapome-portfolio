@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-  // ホームでは背景の白黒に対して文字を反転（difference）させる
-  const isHome = useLocation().pathname === "/";
 
   return (
-    <header className={`header${isHome ? " header--home" : ""}`}>
+    <header className="header">
       <div className="header-area">
         <Link to="/" className="title" aria-label="Black Pomeranian（ブラックポメラニアン）ホームへ戻る">
           {/* 装飾文字（Mathematical Fraktur）はスクリーンリーダー・検索エンジンが読めないため aria-hidden とし、名前は Link の aria-label で提供する */}
