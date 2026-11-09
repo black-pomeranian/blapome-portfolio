@@ -18,13 +18,11 @@ const sketch = (p) => {
     p.rectMode(p.CENTER);
     const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
     isMobile = p.windowWidth <= 768 || /Mobi|Android|iPhone|iPad|iPod/.test(ua);
-    p.background(isMobile ? 50 : 250);
+    p.background(250);
   };
 
   p.draw = () => {
-    const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
-    isMobile = p.windowWidth <= 768 || /Mobi|Android|iPhone|iPad|iPod/.test(ua);
-    p.background(isMobile ? 50 : 250); // 軽いフェード効果
+    p.background(250); // スマホもPCと同じ明るさ
 
     targetX = p.noise(tx) * p.width;
     targetY = p.noise(ty) * p.height;
@@ -42,39 +40,61 @@ const sketch = (p) => {
       virtualMouseY = p.mouseY;
     }
 
-    let spacing = 15;
-    let segmentSize = 15;
-    let maxWeight = 12;
-    let minWeight = 0.5;
-    let effectRadius = p.width / 2;
+    const spacing = 15;
+    const segmentSize = 15;
+    const maxWeight = 12;
+    const minWeight = 0.5;
+    const effectRadius = p.width / 2;
+    const maxTotal = maxWeight * 1.5;
+    const k = maxWeight / effectRadius;
+    const w = p.width;
+    const h = p.height;
 
-    p.stroke(0);
-    for (let x = 0; x <= p.width; x += spacing) {
-      for (let y = 0; y <= p.height; y += segmentSize) {
-        let dMouse = p.dist(x, y, virtualMouseX, virtualMouseY);
-        let dRandom = p.dist(x, y, targetX, targetY);
-
-        let weightMouse = p.map(dMouse, 0, effectRadius, maxWeight, 0);
-        let weightRandom = p.map(dRandom, 0, effectRadius, maxWeight, 0);
-
-        let totalWeight = p.constrain(weightMouse + weightRandom + minWeight, minWeight, maxWeight * 1.5);
-
-        if (totalWeight > 0.1) {
-          p.strokeWeight(totalWeight);
-          p.line(x, y, x, y + segmentSize);
-        }
+    // 高速化：線を1本ずつ p.line + strokeWeight で描く代わりに、
+    // 各列を「太さが上下で変わる1つの多角形」としてまとめ、全列を1回の fill で描く。
+    // （p5 の関数呼び出しと描画命令の数が数千回 → 1回になる）
+    const ctx = p.drawingContext;
+    const rows = Math.floor(h / segmentSize) + 2;
+    const half = new Float32Array(rows);
+    ctx.beginPath();
+    for (let x = 0; x <= w; x += spacing) {
+      const dxm = x - virtualMouseX;
+      const dxr = x - targetX;
+      for (let r = 0; r < rows; r++) {
+        const y = r * segmentSize;
+        const dym = y - virtualMouseY;
+        const dyr = y - targetY;
+        const t = maxWeight * 2 + minWeight
+          - k * (Math.sqrt(dxm * dxm + dym * dym) + Math.sqrt(dxr * dxr + dyr * dyr));
+        half[r] = (t < minWeight ? minWeight : t > maxTotal ? maxTotal : t) / 2;
       }
+      ctx.moveTo(x - half[0], 0);
+      for (let r = 1; r < rows; r++) ctx.lineTo(x - half[r], r * segmentSize);
+      for (let r = rows - 1; r >= 0; r--) ctx.lineTo(x + half[r], r * segmentSize);
+      ctx.closePath();
     }
+    ctx.fillStyle = '#000';
+    ctx.fill();
 
-    p.noStroke();
-    p.fill(173, 255, 47, 150);
-    p.rect(virtualMouseX, virtualMouseY, 20, 20);
-    p.fill(173, 255, 47, 150);
-    p.rect(targetX, targetY, 20, 20);
+    // 2つの焦点を細い十字線で示す
+    drawMarker(virtualMouseX, virtualMouseY);
+    drawMarker(targetX, targetY);
+  };
+
+  const drawMarker = (x, y) => {
+    const arm = 14;
+    p.stroke(173, 255, 47);
+    p.strokeWeight(1.5);
+    p.line(x - arm, y, x - 4, y);
+    p.line(x + 4, y, x + arm, y);
+    p.line(x, y - arm, x, y - 4);
+    p.line(x, y + 4, x, y + arm);
   };
 
   p.windowResized = () => {
     p.resizeCanvas(p.windowWidth, p.windowHeight);
+    const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
+    isMobile = p.windowWidth <= 768 || /Mobi|Android|iPhone|iPad|iPod/.test(ua);
   };
 };
 
@@ -104,7 +124,9 @@ const P5Background = () => {
     <div
       ref={canvasRef}
       className="fixed inset-0 bg-transparent overflow-hidden"
-      style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1 }}
+      // blur は GPU 合成で処理される CSS filter でかける（canvas 側の ctx.filter は重い）。
+      // 画面端がぼけて透けないよう少し拡大しておく
+      style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1, filter: 'blur(12px)', transform: 'scale(1.06)' }}
     />
   );
 };

@@ -36,7 +36,13 @@ import GenerativeClockPage from "./components/Project/GenerativeClock/ClockPage"
 const SiteBackground = () => {
   const { pathname } = useLocation();
   if (pathname.startsWith("/Project/GenerativeClock/clock")) return null;
-  return <P5Background />;
+  // 背景の線にベールをかけ、全ページ黒とグレーのトーンにそろえる
+  return (
+    <>
+      <P5Background />
+      <div className="bg-veil" aria-hidden="true" />
+    </>
+  );
 };
 
 function App() {
@@ -79,4 +85,4 @@ function App() {
     </Router>
   );
 }
-export default App;
+export default App;

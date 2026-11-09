@@ -3,19 +3,19 @@ import React from 'react';
 const About = () => {
   return (
     <main className="container flex justify-center ">
-      <article className="flex flex-col md:flex-row  md:space-x-8 space-y-4 md:space-y-0 w-10/12 md:w-3/4">
+      <article className="flex flex-col md:flex-row md:space-x-14 space-y-10 md:space-y-0 w-full md:w-10/12">
         {/* プロフィール画像 */}
-        <figure className="flex-1" style={{ margin: 0 }}>
+        <figure className="flex-1 about-figure" style={{ margin: 0 }}>
           <img
             src={`${process.env.PUBLIC_URL}/images/profile.png`}
             alt="VJ・DJ・クリエイティブプログラマー Black Pomeranian（ブラックポメラニアン）のプロフィール写真"
-            className="w-full rounded"
+            className="w-full"
           />
         </figure>
 
         {/* テキスト内容 */}
-        <section className="flex-1 flex flex-col text-light" aria-labelledby="about-heading">
-          <p className="rubi text-start m-0" lang="ja">ブラックポメラニアン</p>
+        <section className="flex-1 flex flex-col" aria-labelledby="about-heading">
+          <p className="rubi text-start mb-2" lang="ja">ブラックポメラニアン</p>
           <h1 id="about-heading" className="about-title text-start mb-3">Black Pomeranian</h1>
 
           <p className="profile-jp text-start mb-1 py-2" lang="ja">
