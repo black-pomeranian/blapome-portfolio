@@ -22,8 +22,6 @@ const sketch = (p) => {
   };
 
   p.draw = () => {
-    const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
-    isMobile = p.windowWidth <= 768 || /Mobi|Android|iPhone|iPad|iPod/.test(ua);
     p.background(isMobile ? 50 : 250); // 軽いフェード効果
 
     targetX = p.noise(tx) * p.width;
@@ -42,29 +40,41 @@ const sketch = (p) => {
       virtualMouseY = p.mouseY;
     }
 
-    let spacing = 15;
-    let segmentSize = 15;
-    let maxWeight = 12;
-    let minWeight = 0.5;
-    let effectRadius = p.width / 2;
+    const spacing = 15;
+    const segmentSize = 15;
+    const maxWeight = 12;
+    const minWeight = 0.5;
+    const effectRadius = p.width / 2;
+    const maxTotal = maxWeight * 1.5;
+    const k = maxWeight / effectRadius;
+    const w = p.width;
+    const h = p.height;
 
-    p.stroke(0);
-    for (let x = 0; x <= p.width; x += spacing) {
-      for (let y = 0; y <= p.height; y += segmentSize) {
-        let dMouse = p.dist(x, y, virtualMouseX, virtualMouseY);
-        let dRandom = p.dist(x, y, targetX, targetY);
-
-        let weightMouse = p.map(dMouse, 0, effectRadius, maxWeight, 0);
-        let weightRandom = p.map(dRandom, 0, effectRadius, maxWeight, 0);
-
-        let totalWeight = p.constrain(weightMouse + weightRandom + minWeight, minWeight, maxWeight * 1.5);
-
-        if (totalWeight > 0.1) {
-          p.strokeWeight(totalWeight);
-          p.line(x, y, x, y + segmentSize);
-        }
+    // 高速化：線を1本ずつ p.line + strokeWeight で描く代わりに、
+    // 各列を「太さが上下で変わる1つの多角形」としてまとめ、全列を1回の fill で描く。
+    // （p5 の関数呼び出しと描画命令の数が数千回 → 1回になる）
+    const ctx = p.drawingContext;
+    const rows = Math.floor(h / segmentSize) + 2;
+    const half = new Float32Array(rows);
+    ctx.beginPath();
+    for (let x = 0; x <= w; x += spacing) {
+      const dxm = x - virtualMouseX;
+      const dxr = x - targetX;
+      for (let r = 0; r < rows; r++) {
+        const y = r * segmentSize;
+        const dym = y - virtualMouseY;
+        const dyr = y - targetY;
+        const t = maxWeight * 2 + minWeight
+          - k * (Math.sqrt(dxm * dxm + dym * dym) + Math.sqrt(dxr * dxr + dyr * dyr));
+        half[r] = (t < minWeight ? minWeight : t > maxTotal ? maxTotal : t) / 2;
       }
+      ctx.moveTo(x - half[0], 0);
+      for (let r = 1; r < rows; r++) ctx.lineTo(x - half[r], r * segmentSize);
+      for (let r = rows - 1; r >= 0; r--) ctx.lineTo(x + half[r], r * segmentSize);
+      ctx.closePath();
     }
+    ctx.fillStyle = '#000';
+    ctx.fill();
 
     // 2つの焦点を細い十字線で示す
     drawMarker(virtualMouseX, virtualMouseY);
@@ -83,6 +93,8 @@ const sketch = (p) => {
 
   p.windowResized = () => {
     p.resizeCanvas(p.windowWidth, p.windowHeight);
+    const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
+    isMobile = p.windowWidth <= 768 || /Mobi|Android|iPhone|iPad|iPod/.test(ua);
   };
 };
 
